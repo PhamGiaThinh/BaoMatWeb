@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "XemMonAnServlet", urlPatterns = {"/admin/xem-mon-an"})
+@WebServlet(name = "XemMonAnServlet", urlPatterns = {"/admin-xem-mon-an"})
 public class XemMonAnServlet extends HttpServlet implements ActionPermissionID {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {

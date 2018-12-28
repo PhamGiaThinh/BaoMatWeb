@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-@WebServlet(name = "XemChiTietThucDonServlet", urlPatterns = { "/admin/thuc-don-mon-an" })
+@WebServlet(name = "XemChiTietThucDonServlet", urlPatterns = { "/admin-thuc-don-mon-an" })
 public class XemChiTietThucDonServlet extends HttpServlet implements ActionPermissionID {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {

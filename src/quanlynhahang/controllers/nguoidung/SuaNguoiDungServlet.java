@@ -1,7 +1,5 @@
 package quanlynhahang.controllers.nguoidung;
 
-import quanlynhahang.common.ActionPermissionID;
-import quanlynhahang.common.AuthorizePermission;
 import quanlynhahang.common.DbAccess;
 import quanlynhahang.models.businessmodels.NguoiDungService;
 import quanlynhahang.models.datamodels.NguoiDung;
@@ -18,7 +16,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-@WebServlet(name = "SuaNguoiDungServlet", urlPatterns = {"/admin/sua-nguoi-dung"})
+@WebServlet(name = "SuaNguoiDungServlet", urlPatterns = {"/admin-sua-nguoi-dung"})
 public class SuaNguoiDungServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
@@ -72,6 +70,6 @@ public class SuaNguoiDungServlet extends HttpServlet {
         } catch (ParseException | SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-        response.sendRedirect("/admin/nguoi-dung");
+        response.sendRedirect("admin-nguoi-dung");
     }
 }

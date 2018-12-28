@@ -30,7 +30,7 @@ public abstract class ConnectDatabase {
     }
 
     protected void openConnection() throws SQLException, ClassNotFoundException {
-        String baseConnectionString = "jdbc:sqlserver://quan-ly-nha-hang.database.windows.net:1433;database=QuanLyNhaHang_2;username=nldien;password=Continuum10";
+        String baseConnectionString = "jdbc:sqlserver://quan-ly-nha-hang.database.windows.net:1433;database=QuanLyNhaHang;username=nldien;password=Continuum10";
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
         connection = DriverManager.getConnection(baseConnectionString);
     }

@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-@WebServlet(name = "QuanTriVienServlet", urlPatterns = { "/admin/quan-tri-vien" })
+@WebServlet(name = "QuanTriVienServlet", urlPatterns = { "/admin-quan-tri-vien" })
 public class QuanTriVienServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {

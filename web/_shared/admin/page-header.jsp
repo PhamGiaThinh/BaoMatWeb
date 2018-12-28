@@ -3,24 +3,24 @@
 <jsp:include page="/admin/thong-bao"></jsp:include>
 <!-- plugins:css -->
 <link rel="stylesheet"
-      href="<%= request.getContextPath() + "/" %>../../assests/node_modules/mdi/css/materialdesignicons.min.css">
+      href="assests/node_modules/mdi/css/materialdesignicons.min.css">
 <link rel="stylesheet"
-      href="<%= request.getContextPath() + "/" %>../../assests/node_modules/flag-icon-css/css/flag-icon.min.css">
+      href="assests/node_modules/flag-icon-css/css/flag-icon.min.css">
 <link rel="stylesheet"
-      href="<%= request.getContextPath() + "/" %>../../assests/node_modules/perfect-scrollbar/css/perfect-scrollbar.css">
+      href="assests/node_modules/perfect-scrollbar/css/perfect-scrollbar.css">
 
 <!-- endinject -->
 <!-- plugin css for this page -->
 <link rel="stylesheet"
-      href="<%= request.getContextPath() + "/" %>../../assests/node_modules/jvectormap/jquery-jvectormap.css"/>
+      href="assests/node_modules/jvectormap/jquery-jvectormap.css"/>
 <!-- End plugin css for this page -->
 <!-- inject:css -->
-<link rel="stylesheet" href="<%= request.getContextPath() + "/" %>../../assests/css/style.css">
+<link rel="stylesheet" href="assests/css/style.css">
 <!-- endinject -->
-<link rel="shortcut icon" href="<%= request.getContextPath() + "/" %>../../assests/images/favicon.png"/>
+<link rel="shortcut icon" href="assests/images/favicon.png"/>
 
 <link rel="stylesheet"
-      href="<%= request.getContextPath() + "/" %>../../assests/node_modules/jquery-toast-plugin/dist/jquery.toast.min.css">
+      href="assests/node_modules/jquery-toast-plugin/dist/jquery.toast.min.css">
 <style>
     .results tr[visible='false'],
     .no-result {
@@ -61,7 +61,7 @@
                 <b>ADMINISTRATOR</b>
             </a>
             <a class="navbar-brand brand-logo-mini" href=""><img
-                    src="<%= request.getContextPath() + "/" %>../../assests/images/logo.png" alt="logo"/></a>
+                    src="assests/images/logo.png" alt="logo"/></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-stretch">
             <button class="navbar-toggler navbar-toggler align-self-center mr-2" type="button" data-toggle="minimize">
@@ -85,9 +85,9 @@
                         <h6 class="p-3 mb-0 text-center">Thông báo</h6>
                         <c:forEach var="lienHe" items="${requestScope.lienHes}">
                             <c:if test="${lienHe.trangThaiSeen==false}">
-                                <a class="dropdown-item preview-item" href="/admin/lien-he">
+                                <a class="dropdown-item preview-item" href="admin-lien-he">
                                     <div class="preview-thumbnail">
-                                        <img src="/assests/images/profile.jpg" class="profile-pic">
+                                        <img src="assests/images/profile.jpg" alt="" class="profile-pic">
                                     </div>
                                     <div class="preview-item-content">
                                         <p class="mb-0">${lienHe.hoTen} <span
@@ -96,24 +96,6 @@
                                 </a>
                             </c:if>
                         </c:forEach>
-                        <%--<a class="dropdown-item preview-item">--%>
-                        <%--<div class="preview-thumbnail">--%>
-                        <%--<img src="<%= request.getContextPath() + "/" %>../../assests/images/faces/face3.jpg" class="profile-pic">--%>
-                        <%--</div>--%>
-                        <%--<div class="preview-item-content">--%>
-                        <%--<p class="mb-0">James <span class="text-small text-muted">posted a photo on your--%>
-                        <%--wall</span></p>--%>
-                        <%--</div>--%>
-                        <%--</a>--%>
-                        <%--<a class="dropdown-item preview-item">--%>
-                        <%--<div class="preview-thumbnail">--%>
-                        <%--<img src="<%= request.getContextPath() + "/" %>../../assests/images/faces/face2.jpg" class="profile-pic">--%>
-                        <%--</div>--%>
-                        <%--<div class="preview-item-content">--%>
-                        <%--<p class="mb-0">Alex <span class="text-small text-muted">just mentioned you in his--%>
-                        <%--post</span></p>--%>
-                        <%--</div>--%>
-                        <%--</a>--%>
                         <div class="dropdown-divider"></div>
                         <p class="p-3 mb-0 text-center">View all activities</p>
                     </div>
@@ -181,7 +163,7 @@
                 <li class="nav-item nav-profile">
                     <a href="#" class="nav-link">
                             <span class="nav-profile-image">
-                                <img src="<%= request.getContextPath() + "/" %>../../assests/images/faces/face1.jpg"
+                                <img src="assests/images/faces/face1.jpg"
                                      alt="profile">
                                 <span class="login-status online"></span>
                                 <!--change to offline or busy as needed-->
@@ -192,7 +174,7 @@
                     <span class="nav-link justify-content-center text-danger"><b>QUẢN TRỊ WEBSITE</b></span>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./admin-dashboard.html">
+                    <a class="nav-link" href="admin">
                         <i class="mdi mdi-compass-outline menu-icon"></i>
                         <span class="menu-title">Dashboard</span>
                     </a>
@@ -201,59 +183,47 @@
                     <span class="nav-link justify-content-center text-danger"><b>DANH MỤC QUẢN LÝ</b></span>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin/thuc-don">
+                    <a class="nav-link" href="admin-thuc-don">
                         <i class="mdi mdi-silverware-variant menu-icon"></i>
                         <span class="menu-title">Quản Lý Thực Đơn</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin/loai-mon">
+                    <a class="nav-link" href="admin-loai-mon">
                         <i class="mdi mdi-format-list-bulleted-type menu-icon"></i>
                         <span class="menu-title">Quản Lý Loại Món</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin/mon-an">
+                    <a class="nav-link" href="admin-mon-an">
                         <i class="mdi mdi-food-fork-drink menu-icon"></i>
                         <span class="menu-title">Quản Lý Món Ăn</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin/bai-viet">
+                    <a class="nav-link" href="admin-bai-viet">
                         <i class="mdi mdi-book-open-page-variant menu-icon"></i>
                         <span class="menu-title">Quản Lý Bài viết</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin/dat-ban">
+                    <a class="nav-link" href="admin-dat-ban">
                         <i class="mdi mdi-book-open-page-variant menu-icon"></i>
                         <span class="menu-title">Quản Lý Đặt Bàn</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin/lien-he">
+                    <a class="nav-link" href="admin-lien-he">
                         <i class="mdi mdi-book-open-page-variant menu-icon"></i>
                         <span class="menu-title">Quản Lý Liên Hệ</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin/hoa-don">
+                    <a class="nav-link" href="admin-hoa-don">
                         <i class="mdi mdi-book-open-page-variant menu-icon"></i>
                         <span class="menu-title">Quản Lý Hóa Đơn</span>
                     </a>
                 </li>
-                <%--<li class="nav-item">--%>
-                <%--<a class="nav-link" href="/admin/dat-ban">--%>
-                <%--<i class="mdi mdi-table menu-icon"></i>--%>
-                <%--<span class="menu-title">Quản Lý Đặt Bàn</span>--%>
-                <%--</a>--%>
-                <%--</li>--%>
-                <%--<li class="nav-item">--%>
-                <%--<a class="nav-link" href="/admin/hoa-don">--%>
-                <%--<i class="mdi mdi-content-paste menu-icon"></i>--%>
-                <%--<span class="menu-title">Quản Lý Hóa Đơn</span>--%>
-                <%--</a>--%>
-                <%--</li>--%>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="collapse" href="#page-layouts" aria-expanded="false"
                        aria-controls="page-layouts">
@@ -264,8 +234,8 @@
                     <div class="collapse" id="page-layouts">
                         <ul class="nav flex-column sub-menu">
                             <li class="nav-item d-none d-lg-block"><a class="nav-link"
-                                                                      href="/admin/nguoi-dung">Người Dùng</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/admin/quan-tri-vien">Quản Trị Viên</a>
+                                                                      href="admin-nguoi-dung">Người Dùng</a></li>
+                            <li class="nav-item"><a class="nav-link" href="admin-quan-tri-vien">Quản Trị Viên</a>
                             </li>
                         </ul>
                     </div>
@@ -281,29 +251,15 @@
                     <div class="collapse" id="page-layouts1">
                         <ul class="nav flex-column sub-menu">
                             <li class="nav-item d-none d-lg-block"><a class="nav-link"
-                                                                      href="/admin/mon-an-thuc-don">Món ăn - Thực
+                                                                      href="admin-mon-an-thuc-don">Món ăn - Thực
                                 đơn</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/admin/thong-ke-dich-vu">Dịch vụ</a>
+                            <li class="nav-item"><a class="nav-link" href="admin-thong-ke-dich-vu">Dịch vụ</a>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="/admin/thong-ke-tong-thu">Tổng thu</a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="/admin/xuat-pdf">Xuất báo cáo</a>
+                            <li class="nav-item"><a class="nav-link" href="admin-thong-ke-tong-thu">Tổng thu</a>
                             </li>
                         </ul>
                     </div>
                 </li>
-                <%--<li class="nav-item">--%>
-                <%--<a class="nav-link" href="/admin/nghiep-vu">--%>
-                <%--<i class="mdi mdi-account-convert menu-icon"></i>--%>
-                <%--<span class="menu-title">Quản Nghiệp vụ</span>--%>
-                <%--</a>--%>
-                <%--</li>--%>
-                <%--<li class="nav-item">--%>
-                <%--<a class="nav-link" href="/admin/quyen">--%>
-                <%--<i class="mdi mdi-account-key menu-icon"></i>--%>
-                <%--<span class="menu-title">Quản Lý Quyền</span>--%>
-                <%--</a>--%>
-                <%--</li>--%>
             </ul>
         </nav>
         <!-- partial -->

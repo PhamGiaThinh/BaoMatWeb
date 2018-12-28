@@ -26,7 +26,7 @@ import java.util.Date;
 @MultipartConfig(fileSizeThreshold = 1024 * 1024 * 2,
         maxFileSize = 1024 * 1024 * 10,
         maxRequestSize = 1024 * 1024 * 50)
-@WebServlet(name = "ThemMonAnServlet", urlPatterns = {"/admin/them-mon-an"})
+@WebServlet(name = "ThemMonAnServlet", urlPatterns = {"/admin-them-mon-an"})
 public class ThemMonAnServlet extends HttpServlet implements ActionPermissionID {
     private String getFileName(final Part part) {
         final String partHeader = part.getHeader("content-disposition");
@@ -117,7 +117,7 @@ public class ThemMonAnServlet extends HttpServlet implements ActionPermissionID 
         } catch (ParseException | SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-        response.sendRedirect("/admin/mon-an");
+        response.sendRedirect("admin-mon-an");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

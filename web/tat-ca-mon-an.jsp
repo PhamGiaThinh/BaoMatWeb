@@ -100,11 +100,11 @@
                 <div class="danhmuc">
                     <h3 class="left-title">Danh mục</h3>
                     <ul class="left-margin">
-                        <li><a href="/trang-chu" class="ml-2">Trang chủ</a></li>
-                        <li><a href="/thuc-don" class="ml-2">Thực đơn</a></li>
-                        <li><a href="/tin-tuc-su-kien" class="ml-2">Tin tức - sự kiện</a></li>
-                        <li><a href="/gioi-thieu" class="ml-2">Giới thiệu</a></li>
-                        <li><a href="/lien-he" class="ml-2">Liên hệ</a></li>
+                        <li><a href="trang-chu" class="ml-2">Trang chủ</a></li>
+                        <li><a href="thuc-don" class="ml-2">Thực đơn</a></li>
+                        <li><a href="tin-tuc" class="ml-2">Tin tức - sự kiện</a></li>
+                        <li><a href="gioi-thieu" class="ml-2">Giới thiệu</a></li>
+                        <li><a href="lien-he" class="ml-2">Liên hệ</a></li>
                     </ul>
                 </div>
                 <div class="timtheo">
@@ -127,18 +127,18 @@
                         <li>
                             <span class="font-weight-bold">Loại món</span>
                             <ul class="left-margin">
-                                <a class="badge badge-danger" href="/lay-mon-an-theo-loai-mon?idLoaiMon=11">Món khai
+                                <a class="badge badge-danger" href="lay-mon-an-theo-loai-mon?idLoaiMon=11">Món khai
                                     vị</a>
-                                <a class="badge badge-warning" href="/lay-mon-an-theo-loai-mon?idLoaiMon=12">Món
+                                <a class="badge badge-warning" href="lay-mon-an-theo-loai-mon?idLoaiMon=12">Món
                                     chính</a>
-                                <a class="badge badge-primary" href="/lay-mon-an-theo-loai-mon?idLoaiMon=13">Món tráng
+                                <a class="badge badge-primary" href="lay-mon-an-theo-loai-mon?idLoaiMon=13">Món tráng
                                     miệng</a>
-                                <a class="badge badge-success" href="/lay-mon-an-theo-loai-mon?idLoaiMon=1">Món
+                                <a class="badge badge-success" href="lay-mon-an-theo-loai-mon?idLoaiMon=1">Món
                                     nướng</a>
-                                <a class="badge badge-info" href="/lay-mon-an-theo-loai-mon?idLoaiMon=2">Món lẩu</a>
-                                <a class="badge badge-secondary" href="/lay-mon-an-theo-loai-mon?idLoaiMon=7">Món
+                                <a class="badge badge-info" href="lay-mon-an-theo-loai-mon?idLoaiMon=2">Món lẩu</a>
+                                <a class="badge badge-secondary" href="lay-mon-an-theo-loai-mon?idLoaiMon=7">Món
                                     hấp</a>
-                                <a class="badge badge-light" href="/lay-mon-an-theo-loai-mon?idLoaiMon=10">Món xào</a>
+                                <a class="badge badge-light" href="lay-mon-an-theo-loai-mon?idLoaiMon=10">Món xào</a>
                             </ul>
                         </li>
                     </ul>
@@ -179,9 +179,9 @@
                         <div class="row">
                             <c:forEach var="monAn" items="${requestScope.monAns}">
                                 <div class="food-item col-md-4 col-sm-6 col-12 mb-5 contentPage">
-                                    <a href="/chi-tiet-mon-an?idMonAn=${monAn.idMonAn}">
+                                    <a href="chi-tiet-mon-an?idMonAn=${monAn.idMonAn}">
                                         <div class="food-img">
-                                            <img src="${monAn.hinhMonAn}" height="170px"/>
+                                            <img src="${monAn.hinhMonAn}" height="170px" alt=""/>
                                         </div>
                                         <div class="row">
                                             <p class="col-8 food-name" style="line-height: 30px">${monAn.tenMonAn}</p>

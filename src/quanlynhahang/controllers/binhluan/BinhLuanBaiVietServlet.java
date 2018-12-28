@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-@WebServlet(name = "BinhLuanBaiVietServlet", urlPatterns = { "/admin/binh-luan-bai-viet" })
+@WebServlet(name = "BinhLuanBaiVietServlet", urlPatterns = { "/admin-binh-luan-bai-viet" })
 public class BinhLuanBaiVietServlet extends HttpServlet implements ActionPermissionID {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {

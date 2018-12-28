@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "XemBaiVietServlet", urlPatterns = { "/admin/xem-bai-viet" })
+@WebServlet(name = "XemBaiVietServlet", urlPatterns = { "/admin-xem-bai-viet" })
 public class XemBaiVietServlet extends HttpServlet implements ActionPermissionID {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {

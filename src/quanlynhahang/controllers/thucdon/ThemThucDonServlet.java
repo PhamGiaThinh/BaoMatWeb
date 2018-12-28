@@ -17,7 +17,7 @@ import java.sql.SQLException;
 @MultipartConfig(fileSizeThreshold = 1024 * 1024 * 2,
         maxFileSize = 1024 * 1024 * 10,
         maxRequestSize = 1024 * 1024 * 50)
-@WebServlet(name = "ThemThucDonServlet", urlPatterns = {"/admin/them-thuc-don"})
+@WebServlet(name = "ThemThucDonServlet", urlPatterns = {"/admin-them-thuc-don"})
 public class ThemThucDonServlet extends HttpServlet implements ActionPermissionID {
     private String getFileName(final Part part) {
         final String partHeader = part.getHeader("content-disposition");
@@ -96,7 +96,7 @@ public class ThemThucDonServlet extends HttpServlet implements ActionPermissionI
 
             ThucDonService thucDonService = new ThucDonService(DbAccess.getValue(request));
             thucDonService.add(thucDon);
-            response.sendRedirect("/admin/thuc-don");
+            response.sendRedirect("admin-thuc-don");
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }

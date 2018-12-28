@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "ThemLoaiMonServlet", urlPatterns = {"/admin/them-loai-mon"})
+@WebServlet(name = "ThemLoaiMonServlet", urlPatterns = {"/admin-them-loai-mon"})
 public class ThemLoaiMonServlet extends HttpServlet implements ActionPermissionID {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
@@ -31,7 +31,7 @@ public class ThemLoaiMonServlet extends HttpServlet implements ActionPermissionI
             e.printStackTrace();
         }
 
-        response.sendRedirect("/admin/loai-mon");
+        response.sendRedirect("admin-loai-mon");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

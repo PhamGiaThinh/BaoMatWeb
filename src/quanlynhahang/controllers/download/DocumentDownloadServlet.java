@@ -12,7 +12,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-@WebServlet(name = "DocumentDownloadServlet", urlPatterns = { "/document/download" })
+@WebServlet(name = "DocumentDownloadServlet", urlPatterns = { "/document-download" })
 public class DocumentDownloadServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {

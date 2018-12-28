@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-@WebServlet(name = "QuyenServlet" ,  urlPatterns = {"/admin/quyen"})
+@WebServlet(name = "QuyenServlet" ,  urlPatterns = {"/admin-quyen"})
 public class QuyenServlet extends HttpServlet {
 
 

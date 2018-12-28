@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "XemQuyenServlet" , urlPatterns = {"/admin/xem-quyen"})
+@WebServlet(name = "XemQuyenServlet" , urlPatterns = {"/admin-xem-quyen"})
 public class XemQuyenServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

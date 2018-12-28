@@ -34,8 +34,8 @@
         <div class="form-row justify-content-center">
             <form method="post" action="XacNhanXemXoaQuyen">
                 <input type="hidden" value="1" name="idquyen"/>
-                <a class="btn btn-primary btn-rounded" href="/admin/sua-quyen?idQuyen=${quyen.idQuyen}">Sửa</a>
-                <a href="/admin/quyen">Về trang chủ</a>
+                <a class="btn btn-primary btn-rounded" href="admin-sua-quyen?idQuyen=${quyen.idQuyen}">Sửa</a>
+                <a href="admin-quyen">Về trang chủ</a>
             </form>
         </div>
     </div>

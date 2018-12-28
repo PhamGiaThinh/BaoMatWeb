@@ -14,7 +14,7 @@
         <h2 class="card-title">Quản Lý Thực Đơn</h2>
         <div class="row">
             <div class="col-sm-12 col-md-6">
-                <a href="/admin/them-thuc-don" class="btn btn-primary btn-rounded">Thêm thực đơn</a>
+                <a href="admin-them-thuc-don" class="btn btn-primary btn-rounded">Thêm thực đơn</a>
             </div>
             <div class="col-sm-12 col-md-6">
                 <input type="search" class="form-control" placeholder="Search"
@@ -48,13 +48,13 @@
                             </c:otherwise>
                         </c:choose>
                         <td>
-                            <a href="/admin/xem-thuc-don?idThucDon=${thucDon.idThucDon}">Xem</a> |
-                            <a href="/admin/sua-thuc-don?idThucDon=${thucDon.idThucDon}">Sửa</a> |
-                            <a href="/admin/xoa-thuc-don?idThucDon=${thucDon.idThucDon}">Xóa</a>
+                            <a href="admin-xem-thuc-don?idThucDon=${thucDon.idThucDon}">Xem</a> |
+                            <a href="admin-sua-thuc-don?idThucDon=${thucDon.idThucDon}">Sửa</a> |
+                            <a href="admin-xoa-thuc-don?idThucDon=${thucDon.idThucDon}">Xóa</a>
                         </td>
                         <td>
-                            <a href="/admin/them-mon-an-vao-thuc-don?idThucDon=${thucDon.idThucDon}">Thêm món ăn</a> |
-                            <a href="/admin/thuc-don-mon-an?idThucDon=${thucDon.idThucDon}">Xem chi tiết</a>
+                            <a href="admin-them-mon-an-vao-thuc-don?idThucDon=${thucDon.idThucDon}">Thêm món ăn</a> |
+                            <a href="admin-thuc-don-mon-an?idThucDon=${thucDon.idThucDon}">Xem chi tiết</a>
                         </td>
                     </tr>
                 </c:forEach>

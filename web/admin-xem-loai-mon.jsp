@@ -29,8 +29,8 @@
         <div class="form-row justify-content-center mt-2">
             <form method="post" action="XacNhanXemLoaiMon">
                 <input type="hidden" value="1" name="idloaimon"/>
-                <a class="btn btn-primary btn-rounded" href="/admin/sua-loai-mon?idLoaiMon=${requestScope.loaiMon.idLoaiMon}">Sửa loại món</a>
-                <a href="/admin/loai-mon" class="btn btn-success btn-rounded">Về trang quản lý loại món</a>
+                <a class="btn btn-primary btn-rounded" href="admin-sua-loai-mon?idLoaiMon=${requestScope.loaiMon.idLoaiMon}">Sửa loại món</a>
+                <a href="admin-loai-mon" class="btn btn-success btn-rounded">Về trang quản lý loại món</a>
             </form>
         </div>
     </div>

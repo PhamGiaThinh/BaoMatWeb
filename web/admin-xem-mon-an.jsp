@@ -14,17 +14,6 @@
         <h2>Thông tin chi tiết món ăn: ${requestScope.monAn.tenMonAn}</h2>
     </div>
     <div class="row">
-        <%--<div class="col-12 mb-3">--%>
-        <%--<span class="label">Ảnh</span> <br>--%>
-        <%--<div class="row">--%>
-        <%--<div class="col-2"><img src="" alt="Ảnh" width="100%"></div>--%>
-        <%--<div class="col-2"><img src="./assests/images/Trua-Nay-An-Gi.jpg" alt="Ảnh" width="100%"></div>--%>
-        <%--<div class="col-2"><img src="./assests/images/Trua-Nay-An-Gi.jpg" alt="Ảnh" width="100%"></div>--%>
-        <%--<div class="col-2"><img src="./assests/images/Trua-Nay-An-Gi.jpg" alt="Ảnh" width="100%"></div>--%>
-        <%--<div class="col-2"><img src="./assests/images/Trua-Nay-An-Gi.jpg" alt="Ảnh" width="100%"></div>--%>
-        <%--<div class="col-2"><img src="./assests/images/Trua-Nay-An-Gi.jpg" alt="Ảnh" width="100%"></div>--%>
-        <%--</div>--%>
-        <%--</div>--%>
         <div class="col-sm-5">
             <img src="${requestScope.monAn.hinhMonAn}" alt="" width="420px" height="325px">
         </div>
@@ -58,17 +47,13 @@
                     <td>Loại Món Ăn:</td>
                     <td>${requestScope.loaiMon.tenLoaiMon}</td>
                 </tr>
-                <%--<tr>--%>
-                <%--<td>Thực Đơn:</td>--%>
-                <%--&lt;%&ndash;<td>${requestScope.thucDon.tenThucDon}</td>&ndash;%&gt;--%>
-                <%--</tr>--%>
             </table>
         </div>
     </div>
     <div class="row justify-content-center mt-3 mb-4">
-        <a href="/admin/sua-mon-an?idMonAn=${monAn.idMonAn}" class="btn btn-primary btn-rounded">Sửa
+        <a href="admin-sua-mon-an?idMonAn=${monAn.idMonAn}" class="btn btn-primary btn-rounded">Sửa
             món ăn</a> &nbsp; &nbsp;
-        <a href="/admin/mon-an" class="btn btn-success btn-rounded">Về trang quản lý món ăn</a>
+        <a href="admin-mon-an" class="btn btn-success btn-rounded">Về trang quản lý món ăn</a>
     </div>
 </div>
 

@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 
-@WebServlet(name = "GetQuyenPostAjax", urlPatterns = { "/admin/ajax-get-quyen" })
+@WebServlet(name = "GetQuyenPostAjax", urlPatterns = { "/admin-ajax-get-quyen" })
 public class GetQuyenPostAjax extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) {
         response.setContentType("text/html;charset=UTF-8");
@@ -30,12 +30,12 @@ public class GetQuyenPostAjax extends HttpServlet {
                 sb.append("<div class='form-group'>\n");
                 sb.append("<div class='form-check form-check-flat'>\n");
                 sb.append("<label class='form-check-label'>\n");
-                sb.append("<input type='checkbox' class='form-check-input quyen' value='" + quyen.getIdQuyen() + "' ");
+                sb.append("<input type='checkbox' class='form-check-input quyen' value='").append(quyen.getIdQuyen()).append("' ");
                 if (quyen.isDuocCap()) {
                     sb.append("checked");
                 }
                 sb.append(">\n");
-                sb.append(quyen.getTenQuyen() + "\n");
+                sb.append(quyen.getTenQuyen()).append("\n");
                 sb.append("<i class='input-helper'></i>\n");
                 sb.append("</label>\n");
                 sb.append("</div>\n");

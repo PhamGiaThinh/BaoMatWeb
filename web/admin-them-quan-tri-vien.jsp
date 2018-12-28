@@ -10,7 +10,7 @@
         <p class="card-description">
             Vui lòng nhập đầy đủ thông tin yêu cầu
         </p>
-        <form action="/admin/them-quan-tri-vien" method="post">
+        <form action="admin-them-quan-tri-vien" method="post">
             <div class="form-row">
                 <div class="col-12 col-sm-6">
                     <div class="form-group">
@@ -105,7 +105,7 @@
             </div>
             <div class="justify-content-center">
                 <input type="submit" class="btn btn-primary btn-rounded" id="btn-submit" value="Thêm quản trị viên"/>
-                <a href="admin-quan-tri-vien.html" class="btn btn-success btn-rounded"
+                <a href="admin-quan-tri-vien" class="btn btn-success btn-rounded"
                         style="margin-left: 16px;">Về trang chủ</a>
             </div>
         </form>

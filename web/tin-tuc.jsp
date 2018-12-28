@@ -23,17 +23,17 @@
     <div class="col-9 contact-bar-functions">
         <c:choose>
             <c:when test="${sessionScope.nguoiDungHienTai != null}">
-                <a href="/sua-thong-tin-ca-nhan">Chào
+                <a href="sua-thong-tin-ca-nhan">Chào
                     mừng ${sessionScope.nguoiDungHienTai.hoDem} ${sessionScope.nguoiDungHienTai.ten} đến với website</a>
-                <a href="/dang-xuat">Đăng xuất</a>
+                <a href="dang-xuat">Đăng xuất</a>
                 <c:if test="${sessionScope.nguoiDungHienTai.quanTriVien}">
-                    <a href="/admin/ket-noi-database">Quản trị</a>
+                    <a href="admin/ket-noi-database">Quản trị</a>
                 </c:if>
-                <a href="/gio-hang">Giỏ hàng</a>
+                <a href="gio-hang">Giỏ hàng</a>
             </c:when>
             <c:otherwise>
-                <a href="/dang-nhap">Đăng nhập</a>
-                <a href="/dang-ky">Đăng ký</a>
+                <a href="dang-nhap">Đăng nhập</a>
+                <a href="dang-ky">Đăng ký</a>
             </c:otherwise>
         </c:choose>
     </div>
@@ -51,32 +51,32 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link font-blonde-script text-white font-size-h5" href="/trang-chu">Trang chủ
+                <a class="nav-link font-blonde-script text-white font-size-h5" href="trang-chu">Trang chủ
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-blonde-script text-white font-size-h5" href="/thuc-don">Thực đơn</a>
+                <a class="nav-link font-blonde-script text-white font-size-h5" href="thuc-don">Thực đơn</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-blonde-script text-white font-size-h5" href="/tat-ca-mon-an">Món ăn</a>
+                <a class="nav-link font-blonde-script text-white font-size-h5" href="tat-ca-mon-an">Món ăn</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-blonde-script text-white font-size-h5" href="/dat-mon-nhom">Đặt món nhóm</a>
+                <a class="nav-link font-blonde-script text-white font-size-h5" href="dat-mon-nhom">Đặt món nhóm</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-blonde-script text-white font-size-h5" href="/bai-viet">Bài
+                <a class="nav-link font-blonde-script text-white font-size-h5" href="tin-tuc">Bài
                     viết</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-blonde-script text-white font-size-h5" href="/gioi-thieu">Nhà
+                <a class="nav-link font-blonde-script text-white font-size-h5" href="gioi-thieu">Nhà
                     hàng</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-blonde-script text-white font-size-h5" href="/dat-ban">Đặt bàn</a>
+                <a class="nav-link font-blonde-script text-white font-size-h5" href="dat-ban">Đặt bàn</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-blonde-script text-white font-size-h5" href="/lien-he">Liên hệ</a>
+                <a class="nav-link font-blonde-script text-white font-size-h5" href="lien-he">Liên hệ</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -97,7 +97,7 @@
             <ul class="list-group list-group-flush">
                 <c:forEach var="loaiBv" items="${requestScope.loaiBaiViets}">
                     <li class="list-group-item">
-                        <a href="/tin-tuc?loaiBaiViet=${loaiBv.idLoaiBaiViet}">${loaiBv.tenLoaiBaiViet}</a>
+                        <a href="tin-tuc?loaiBaiViet=${loaiBv.idLoaiBaiViet}">${loaiBv.tenLoaiBaiViet}</a>
                     </li>
                 </c:forEach>
             </ul>
@@ -108,7 +108,7 @@
             <div class="card-header row">
                 <div class="col-md-3 col-sm-12"><h5 style="line-height: unset;">Danh sách bài viết</h5></div>
                 <div class="col-md-9 col-sm-12">
-                    <form action="/tim-tin-tuc" method="post">
+                    <form action="" method="post">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Nhập bài viết muốn tìm">
                             <div class="input-group-append">
@@ -122,7 +122,7 @@
                 <div class="row">
                     <div class="col-md-8 col-sm-12 newest-bai-viet-main">
                         <c:if test="${requestScope.baiViet1 != null}">
-                            <a href="/chi-tiet-bai-viet?idBaiViet=${requestScope.baiViet1.idBaiViet}">
+                            <a href="chi-tiet-bai-viet?idBaiViet=${requestScope.baiViet1.idBaiViet}">
                                 <img src="${requestScope.baiViet1.hinh}" alt=""/>
                                 <div class="new-title">
                                     <h4>${requestScope.baiViet1.tenBaiViet}</h4>
@@ -135,7 +135,7 @@
                         <div class="row">
                             <div class="col newest-bai-viet-sub">
                                 <c:if test="${requestScope.baiViet2 != null}">
-                                    <a href="/chi-tiet-bai-viet?idBaiViet=${requestScope.baiViet2.idBaiViet}">
+                                    <a href="chi-tiet-bai-viet?idBaiViet=${requestScope.baiViet2.idBaiViet}">
                                         <img src="${requestScope.baiViet2.hinh}" alt=""/>
                                         <div class="new-title">
                                             <h5>${requestScope.baiViet2.tenBaiViet}</h5>
@@ -147,7 +147,7 @@
                             <div class="w-100" style="padding-bottom: 16px;"></div>
                             <div class="col newest-bai-viet-sub">
                                 <c:if test="${requestScope.baiViet3 != null}">
-                                    <a href="/chi-tiet-bai-viet?idBaiViet=${requestScope.baiViet3.idBaiViet}">
+                                    <a href="chi-tiet-bai-viet?idBaiViet=${requestScope.baiViet3.idBaiViet}">
                                         <img src="${requestScope.baiViet3.hinh}" alt=""/>
                                         <div class="new-title">
                                             <h5>${requestScope.baiViet3.tenBaiViet}</h5>
@@ -162,7 +162,7 @@
 
                 <c:forEach var="baiViet" items="${requestScope.baiViets}" varStatus="stt">
                     <div class="other-news">
-                        <a href="/chi-tiet-bai-viet?idBaiViet=${baiViet.idBaiViet}">
+                        <a href="chi-tiet-bai-viet?idBaiViet=${baiViet.idBaiViet}">
                             <div class="row">
                                 <div class="news-img col-md-4 col-12">
                                     <img src="${baiViet.hinh}" alt="">

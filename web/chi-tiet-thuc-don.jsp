@@ -104,7 +104,7 @@
         <div class="row">
             <c:forEach var="monAn" items="${requestScope.monAns}">
                 <div class="food-item col-md-3 col-sm-6 col-12 mb-5 contentPage">
-                    <a href="/chi-tiet-mon-an?idMonAn=${monAn.idMonAn}">
+                    <a href="chi-tiet-mon-an?idMonAn=${monAn.idMonAn}">
                         <div class="food-img">
                             <img src="${monAn.hinhMonAn}" height="170px"/>
                         </div>

@@ -96,11 +96,11 @@
                         <td>${monAn.khuyenMai}%</td>
                         <td>${monAn.ngayThem}</td>
                         <td>
-                            <a href="/admin/xem-mon-an?idMonAn=${monAn.idMonAn}">Xem</a> |
-                            <a href="/admin/sua-mon-an?idMonAn=${monAn.idMonAn}">Sửa</a> |
-                            <a href="/admin/xoa-mon-an?idMonAn=${monAn.idMonAn}">Xóa</a>
+                            <a href="admin-xem-mon-an?idMonAn=${monAn.idMonAn}">Xem</a> |
+                            <a href="admin-sua-mon-an?idMonAn=${monAn.idMonAn}">Sửa</a> |
+                            <a href="admin-xoa-mon-an?idMonAn=${monAn.idMonAn}">Xóa</a>
                         </td>
-                        <td><a href="/admin/binh-luan-mon-an-hien-tai?idMonAn=${monAn.idMonAn}">Bình Luận</a></td>
+                        <td><a href="admin-binh-luan-mon-an-hien-tai?idMonAn=${monAn.idMonAn}">Bình Luận</a></td>
                     </tr>
                 </c:forEach>
                 </tbody>

@@ -34,7 +34,7 @@
                                 <p class="text-danger">${requestScope.message}</p>
                                 <h2>Đăng ký tài khoản</h2>
                                 <h4 class="font-weight-light">Chào mừng bạn đến với website nhà hàng</h4>
-                                <form class="pt-4" action="/dang-ky" method="post">
+                                <form class="pt-4" action="dang-ky" method="post">
                                     <div class="form-group">
                                         <label for="txt-email">Email</label>
                                         <input type="email" name="txtEmail" class="form-control" id="txt-email"
@@ -66,7 +66,7 @@
                                         </div>
                                     </div>
                                     <div class="mt-2 text-center">
-                                        <a href="dang-nhap.html" class="auth-link text-black">Đã có tài khoản? <span
+                                        <a href="dang-nhap" class="auth-link text-black">Đã có tài khoản? <span
                                                 class="font-weight-medium">Đăng nhập</span></a>
                                     </div>
                                 </form>

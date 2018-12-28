@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "XoaQuanTriVienServlet", urlPatterns = { "/admin/xoa-quan-tri-vien" })
+@WebServlet(name = "XoaQuanTriVienServlet", urlPatterns = { "/admin-xoa-quan-tri-vien" })
 public class XoaQuanTriVienServlet extends HttpServlet implements ActionPermissionID {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         try {
@@ -35,7 +35,7 @@ public class XoaQuanTriVienServlet extends HttpServlet implements ActionPermissi
             }
             QuanTriVienService service = new QuanTriVienService(DbAccess.getValue(request));
             service.delete(email);
-            response.sendRedirect("/admin/quan-tri-vien");
+            response.sendRedirect("admin-quan-tri-vien");
         } catch (Exception e) {
             e.printStackTrace();
             response.sendError(500);

@@ -6,7 +6,6 @@ import quanlynhahang.common.DbAccess;
 import quanlynhahang.models.businessmodels.BinhLuanService;
 import quanlynhahang.models.businessmodels.MonAnService;
 import quanlynhahang.models.datamodels.BinhLuan;
-import quanlynhahang.models.viewmodels.UserDbConnect;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,10 +14,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.ArrayList;
 
-@WebServlet(name = "BinhLuanMonAnServlet", urlPatterns = {"/admin/binh-luan-mon-an-hien-tai"})
+@WebServlet(name = "BinhLuanMonAnServlet", urlPatterns = {"/admin-binh-luan-mon-an-hien-tai"})
 public class BinhLuanMonAnServlet extends HttpServlet implements ActionPermissionID {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
@@ -27,10 +25,10 @@ public class BinhLuanMonAnServlet extends HttpServlet implements ActionPermissio
                 return;
             }
 
-//            if (!AuthorizePermission.checkPermissionAllowed(request, getPermissionId())) {
-//                response.sendError(401);
-//                return;
-//            }
+            if (!AuthorizePermission.checkPermissionAllowed(request, getPermissionId())) {
+                response.sendError(401);
+                return;
+            }
 
             String idMonAn = request.getParameter("idMonAn");
             if (idMonAn == null || idMonAn.trim().isEmpty()) {
@@ -44,9 +42,7 @@ public class BinhLuanMonAnServlet extends HttpServlet implements ActionPermissio
 
             MonAnService monAnService = new MonAnService(DbAccess.getValue(request));
             request.setAttribute("monAn", monAnService.get(idMonAn));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         RequestDispatcher dispatcher = request.getRequestDispatcher("/admin-binh-luan-mon-an.jsp");

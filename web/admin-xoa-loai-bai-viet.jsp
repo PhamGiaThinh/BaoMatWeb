@@ -18,11 +18,11 @@
                     <td>${requestScope.loaiBaiViet.moTa}</td>
                 </tr>
         </table>
-        <form action="/admin/xoa-loai-bai-viet" method="post">
+        <form action="admin-xoa-loai-bai-viet" method="post">
             <input type="hidden" value="${requestScope.loaiBaiViet.idLoaiBaiViet}" name="txtIdLoai">
             <div class="form-row justify-content-center">
                 <input type="submit" value="Xóa" class="btn btn-primary btn-rounded">
-                <a href="/admin/loai-bai-viet" class="btn btn-success btn-rounded">Hủy bỏ</a>
+                <a href="admin-loai-bai-viet" class="btn btn-success btn-rounded">Hủy bỏ</a>
             </div>
         </form>
     </div>

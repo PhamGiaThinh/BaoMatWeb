@@ -9,7 +9,7 @@
         <p class="card-description">
         Vui lòng nhập đầy đủ thông tin yêu cầu
         </p>
-        <form class="forms-sample" action="/admin/sua-thuc-don" method="post" enctype="multipart/form-data" >
+        <form class="forms-sample" action="admin-sua-thuc-don" method="post" enctype="multipart/form-data" >
             <div class="form-row">
                 <input type="hidden" name="txtIdThucDon" value="${requestScope.thucDon.idThucDon}">
                 <div class="col-md-6 col-sm-12 form-group">
@@ -120,9 +120,8 @@
             <div class="form-row justify-content-center">
                 <input type="submit" class="btn btn-primary btn-rounded mr-2" id="btn-submit"
                        value="Sửa thực đơn"/>
-                <a href="/admin/thuc-don" class="btn btn-success btn-rounded">Quay về trang quản lý thực đơn</a>
+                <a href="admin-thuc-don" class="btn btn-success btn-rounded">Quay về trang quản lý thực đơn</a>
             </div>
-
         </form>
     </div>
 </div>

@@ -15,7 +15,7 @@ import java.io.PipedReader;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-@WebServlet(name = "ThemNghiepVuServlet" , urlPatterns = {"/admin/them-nghiep-vu"})
+@WebServlet(name = "ThemNghiepVuServlet" , urlPatterns = {"/admin-them-nghiep-vu"})
 public class ThemNghiepVuServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
@@ -30,7 +30,7 @@ public class ThemNghiepVuServlet extends HttpServlet {
             e.printStackTrace();
 
         }
-        response.sendRedirect("/admin/nghiep-vu");
+        response.sendRedirect("admin-nghiep-vu");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -11,7 +11,7 @@
             Vui lòng nhập đầy đủ thông tin yêu cầu
         </p>
 
-        <form class="forms-sample" action="/admin/them-mon-an" method="post" enctype="multipart/form-data">
+        <form class="forms-sample" action="admin-them-mon-an" method="post" enctype="multipart/form-data">
             <div class="form-row">
                 <div class="col-md-6 col-sm-12 form-group">
                     <label for="ten-mon-an">Tên Món Ăn (bắt buộc)</label>
@@ -83,7 +83,7 @@
             <div class="row justify-content-center">
                 <input type="submit" class="btn btn-primary btn-rounded" id="btn-submit"
                        value="Thêm món ăn"/>
-                <a href="/admin/mon-an" class="btn btn-success btn-rounded"> Hủy bỏ
+                <a href="admin-mon-an" class="btn btn-success btn-rounded"> Hủy bỏ
                     </a>
             </div>
         </form>

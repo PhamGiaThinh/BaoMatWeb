@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-@WebServlet(name = "ThemQuanTriVienServlet", urlPatterns = {"/admin/them-quan-tri-vien"})
+@WebServlet(name = "ThemQuanTriVienServlet", urlPatterns = {"/admin-them-quan-tri-vien"})
 public class ThemQuanTriVienServlet extends HttpServlet implements ActionPermissionID {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
@@ -56,7 +56,7 @@ public class ThemQuanTriVienServlet extends HttpServlet implements ActionPermiss
         } catch (Exception e) {
             e.printStackTrace();
         }
-        response.sendRedirect("/admin/quan-tri-vien");
+        response.sendRedirect("admin-quan-tri-vien");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

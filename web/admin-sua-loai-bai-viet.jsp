@@ -8,7 +8,7 @@
     <div class="card-body">
         <h2 class="card-title">Sửa loại bài viết: ${requestScope.loaiBaiViet.tenLoaiBaiViet}</h2>
         <p class="card-description">Vui lòng cung cấp đủ các thông tin sau</p>
-        <form action="/admin/sua-loai-bai-viet" method="post">
+        <form action="admin-sua-loai-bai-viet" method="post">
             <input type="hidden" value="${requestScope.loaiBaiViet.idLoaiBaiViet}" name="txtIdLoai">
             <div class="form-row">
                 <label for="ten-loai-bai-viet">Tên loại bài viết</label>
@@ -22,7 +22,7 @@
             </div>
             <div class="form-row justify-content-center">
                 <input type="submit" value="Lưu lại" class="btn btn-primary btn-rounded">
-                <a href="/admin/loai-bai-viet" class="btn btn-success btn-rounded">Hủy bỏ</a>
+                <a href="admin-loai-bai-viet" class="btn btn-success btn-rounded">Hủy bỏ</a>
             </div>
         </form>
     </div>

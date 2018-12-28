@@ -32,7 +32,7 @@
                             <div class="auth-form-light text-left p-5">
                                 <h2>Bạn đã quên mật khẩu</h2>
                                 <h4 class="font-weight-light">Nhập email để lấy lại tài khoản</h4>
-                                <form class="pt-5" action="/quen-mat-khau" method="post">
+                                <form class="pt-5" action="quen-mat-khau" method="post">
                                     <div class="form-group">
                                         <label for="email">Email</label>
                                         <input type="email" name="txtEmail" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Nhập email" value="${requestScope.txtEmail}">
@@ -44,7 +44,7 @@
                                     </div>
                                     <div class="mt-3 text-center">
                                         <p class="text-success" id="message-for-email-sent"></p>
-                                        <a href="/dang-nhap" class="auth-link text-black">Đăng nhập</a>
+                                        <a href="dang-nhap" class="auth-link text-black">Đăng nhập</a>
                                     </div>
                                 </form>
                             </div>

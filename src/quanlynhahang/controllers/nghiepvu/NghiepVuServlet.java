@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-@WebServlet(name = "NghiepVuServlet", urlPatterns = { "/admin/nghiep-vu" })
+@WebServlet(name = "NghiepVuServlet", urlPatterns = { "/admin-nghiep-vu" })
 public class NghiepVuServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try{

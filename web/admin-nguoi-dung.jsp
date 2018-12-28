@@ -29,15 +29,14 @@
             </tr>
             </thead>
             <tbody>
-            <c:forEach var="nguoiDung" items="${nguoiDungs}">
+            <c:forEach var="nguoiDung" items="${requestScope.nguoiDungs}">
                 <tr>
                     <td>
                         <c:choose>
                             <c:when test="${!nguoiDung.avatar.equals(\"\")}">
-                                <img src="${nguoiDung.avatar}"/>
+                                <img src="${nguoiDung.avatar}" alt=""/>
                             </c:when>
                             <c:otherwise>
-                                <img src=""/>
                             </c:otherwise>
                         </c:choose>
                     </td>
@@ -66,8 +65,8 @@
                         </c:choose>
                     </td>
                     <td>
-                        <a href="/admin/xem-nguoi-dung?email=${nguoiDung.email}">Xem</a> |
-                        <a href="/admin/xoa-nguoi-dung?email=${nguoiDung.email}">Xóa</a>
+                        <a href="admin-xem-nguoi-dung?email=${nguoiDung.email}">Xem</a> |
+                        <a href="admin-xoa-nguoi-dung?email=${nguoiDung.email}">Xóa</a>
                     </td>
                 </tr>
             </c:forEach>

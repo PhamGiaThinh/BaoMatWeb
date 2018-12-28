@@ -46,9 +46,9 @@
         <div class="row">
             <c:forEach var="thucDon" items="${requestScope.thucDons}">
                 <div class="top-menu-item col-12 col-sm-6 col-md-3">
-                    <a href="/chi-tiet-thuc-don?idThucDon=${thucDon.idThucDon}">
+                    <a href="chi-tiet-thuc-don?idThucDon=${thucDon.idThucDon}">
                         <div class="menu-image">
-                            <img src="${thucDon.hinhThucDon}" height="170px">
+                            <img src="${thucDon.hinhThucDon}" height="170px" alt="">
                         </div>
                         <div class="row mt-2">
                             <p class="col-8 menu-name">${thucDon.tenThucDon}</p>
@@ -65,13 +65,13 @@
             <div class="col-3 menu-title">
                 <h1 class="font-blonde-script menu-name">${requestScope.infoThucDonSang.tenThucDon}</h1>
                 <p class="menu-description">${requestScope.infoThucDonSang.moTa}</p>
-                <a href="/chi-tiet-thuc-don?idThucDon=${requestScope.infoThucDonSang.idThucDon}" class="btn btn-success">Xem món ăn</a>
+                <a href="chi-tiet-thuc-don?idThucDon=${requestScope.infoThucDonSang.idThucDon}" class="btn btn-success">Xem món ăn</a>
             </div>
             <div class="col-9">
                 <div class="row">
                     <c:forEach var="monAn" items="${requestScope.bonMonAnThucDonSang}">
                         <div class="col-md-3 col-sm-6 col-12">
-                            <a href="/chi-tiet-mon-an?idMonAn=${monAn.idMonAn}" class="card food-menu">
+                            <a href="chi-tiet-mon-an?idMonAn=${monAn.idMonAn}" class="card food-menu">
                                 <img class="card-img-top" src="${monAn.hinhMonAn}" alt="Banh xeo" height="160px">
                                 <div class="card-body">
                                     <p class="card-text">${monAn.tenMonAn}</p>
@@ -89,14 +89,14 @@
             <div class="col-3 menu-title">
                 <h1 class="font-blonde-script menu-name">${requestScope.infoThucDonTrua.tenThucDon}</h1>
                 <p class="menu-description">${requestScope.infoThucDonTrua.moTa}</p>
-                <a href="/chi-tiet-thuc-don?idThucDon=${requestScope.infoThucDonTrua.idThucDon}" class="btn btn-success">Xem món ăn</a>
+                <a href="chi-tiet-thuc-don?idThucDon=${requestScope.infoThucDonTrua.idThucDon}" class="btn btn-success">Xem món ăn</a>
             </div>
             <div class="col-9">
                 <div class="row">
                     <c:forEach var="monAn" items="${requestScope.bonMonAnThucDonTrua}">
                         <div class="col-md-3 col-sm-6 col-12">
-                            <a href="/chi-tiet-mon-an?idMonAn=${monAn.idMonAn}" class="card food-menu">
-                                <img class="card-img-top" src="${monAn.hinhMonAn}"  height="160px">
+                            <a href="chi-tiet-mon-an?idMonAn=${monAn.idMonAn}" class="card food-menu">
+                                <img class="card-img-top" src="${monAn.hinhMonAn}" alt="" height="160px">
                                 <div class="card-body">
                                     <p class="card-text">${monAn.tenMonAn}</p>
                                 </div>
@@ -113,14 +113,14 @@
             <div class="col-3 menu-title">
                 <h1 class="font-blonde-script menu-name">${requestScope.infoThucDonToi.tenThucDon}</h1>
                 <p class="menu-description">${requestScope.infoThucDonToi.moTa}</p>
-                <a href="/chi-tiet-thuc-don?idThucDon=${requestScope.infoThucDonToi.idThucDon}" class="btn btn-success">Xem món ăn</a>
+                <a href="chi-tiet-thuc-don?idThucDon=${requestScope.infoThucDonToi.idThucDon}" class="btn btn-success">Xem món ăn</a>
             </div>
             <div class="col-9">
                 <div class="row">
                     <c:forEach var="monAn" items="${requestScope.bonMonAnThucDonToi}">
                         <div class="col-md-3 col-sm-6 col-12">
-                            <a href="/chi-tiet-mon-an?idMonAn=${monAn.idMonAn}" class="card food-menu">
-                                <img class="card-img-top" src="${monAn.hinhMonAn}"  height="160px">
+                            <a href="chi-tiet-mon-an?idMonAn=${monAn.idMonAn}" class="card food-menu">
+                                <img class="card-img-top" src="${monAn.hinhMonAn}" alt="" height="160px">
                                 <div class="card-body">
                                     <p class="card-text">${monAn.tenMonAn}</p>
                                 </div>
@@ -141,9 +141,9 @@
         <div class="row">
             <c:forEach var="thucDon" items="${requestScope.tatCaThucDons}">
                 <div class="top-menu-item col-12 col-sm-6 col-md-3 mb-5">
-                    <a href="/chi-tiet-thuc-don?idThucDon=${thucDon.idThucDon}">
+                    <a href="chi-tiet-thuc-don?idThucDon=${thucDon.idThucDon}">
                         <div class="menu-image">
-                            <img src="${thucDon.hinhThucDon}" height="170px">
+                            <img src="${thucDon.hinhThucDon}" alt="" height="170px">
                         </div>
                         <div class="row mt-2">
                             <p class="col-8 menu-name">${thucDon.tenThucDon}</p>

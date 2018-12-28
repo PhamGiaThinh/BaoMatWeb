@@ -15,10 +15,10 @@
             ${requestScope.baiViet.noiDung}
         </div>
         <div class="row justify-content-center">
-            <form action="/admin/xoa-bai-viet" method="post">
+            <form action="admin-xoa-bai-viet" method="post">
                 <input type="hidden" value="${requestScope.baiViet.idBaiViet}" name="txtIdBaiViet" />
                 <input type="submit" class="btn btn-primary btn-rounded" value="Xóa" />
-                <a href="/admin/bai-viet" class="btn btn-success btn-rounded"
+                <a href="admin-bai-viet" class="btn btn-success btn-rounded"
                 style="margin-left: 16px;">Hủy</a>
             </form>
         </div>

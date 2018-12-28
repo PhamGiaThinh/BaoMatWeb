@@ -3,14 +3,14 @@
 <jsp:include page="_shared/admin/top-of-page.jsp" flush="true" />
 <title>Sửa bài viết</title>
 <jsp:include page="_shared/admin/page-header.jsp" flush="true" />
-<script src="<%= request.getContextPath() + "/" %>../../assests/js/ckeditor/ckeditor.js" type="text/javascript"></script>
-<script src="<%= request.getContextPath() + "/" %>../../assests/js/ckfinder/ckfinder.js" type="text/javascript"></script>
+<script src="assests/js/ckeditor/ckeditor.js" type="text/javascript"></script>
+<script src="assests/js/ckfinder/ckfinder.js" type="text/javascript"></script>
 
 <div class="card">
     <div class="card-body">
         <h3 class="card-title">Sửa bài viết: "${requestScope.baiViet.tenBaiViet}"</h3>
         <p class="card-description">Vui lòng nhập đầy đủ thông tin yêu cầu</p>
-        <form action="/admin/sua-bai-viet" method="post">
+        <form action="admin-sua-bai-viet" method="post">
             <input type="hidden" value="${requestScope.baiViet.idBaiViet}" name="txtIdBaiViet" />
             <div class="form-group">
                 <label for="ten-bai-viet">Tên bài viết (bắt buộc)</label>
@@ -53,7 +53,7 @@
             </div>
             <div class="form-row justify-content-center">
                 <input type="submit" value="Sửa bài viết" class="btn btn-primary btn-rounded" id="btn-submit" />
-                <a href="/admin/bai-viet" class="btn btn-success btn-rounded" style="margin-left: 16px;">Về trang chủ</a>
+                <a href="admin-bai-viet" class="btn btn-success btn-rounded" style="margin-left: 16px;">Về trang chủ</a>
             </div>
         </form>
     </div>

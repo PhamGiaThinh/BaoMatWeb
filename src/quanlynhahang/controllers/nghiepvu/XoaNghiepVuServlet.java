@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "XoaNghiepVuServlet" , urlPatterns = {"/admin/xoa-nghiep-vu"})
+@WebServlet(name = "XoaNghiepVuServlet" , urlPatterns = {"/admin-xoa-nghiep-vu"})
 public class XoaNghiepVuServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");

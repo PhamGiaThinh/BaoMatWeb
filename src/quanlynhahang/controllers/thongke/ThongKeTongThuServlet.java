@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-@WebServlet(name = "ThongKeTongThuServlet", urlPatterns = {"/admin/thong-ke-tong-thu"})
+@WebServlet(name = "ThongKeTongThuServlet", urlPatterns = {"/admin-thong-ke-tong-thu"})
 public class ThongKeTongThuServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");

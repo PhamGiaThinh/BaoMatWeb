@@ -15,8 +15,8 @@
             ${requestScope.baiViet.noiDung}
         </div>
         <div class="row justify-content-center">
-            <a href="/admin/sua-bai-viet?id=${requestScope.baiViet.idBaiViet}" class="btn btn-primary btn-rounded">Sửa bài viết</a>
-            <a href="/admin/bai-viet" class="btn btn-success btn-rounded"
+            <a href="admin-sua-bai-viet?id=${requestScope.baiViet.idBaiViet}" class="btn btn-primary btn-rounded">Sửa bài viết</a>
+            <a href="admin-bai-viet" class="btn btn-success btn-rounded"
                     style="margin-left: 16px;">Quay lại</a>
         </div>
     </div>

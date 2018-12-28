@@ -42,75 +42,13 @@
         </li>
     </ol>
 </nav>
-<%--<div class="top-content">--%>
-    <%--<nav class="navbar navbar-expand-lg row" id="navbar-absolute">--%>
-        <%--<a class="navbar-brand font-blonde-script text-white font-size-h3" href="#">--%>
-            <%--<img src="assests/images/logo.png" width="50" height="50" class="d-inline-block align-top" alt="logo">--%>
-            <%--Restaurant--%>
-        <%--</a>--%>
-        <%--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"--%>
-                <%--aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">--%>
-            <%--<span class="navbar-toggler-icon"></span>--%>
-        <%--</button>--%>
-        <%--<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">--%>
-            <%--<ul class="navbar-nav">--%>
-                <%--<li class="nav-item active">--%>
-                    <%--<a class="nav-link font-blonde-script text-white font-size-h5" href="./trang-chu">Trang chủ--%>
-                        <%--<span class="sr-only">(current)</span>--%>
-                    <%--</a>--%>
-                <%--</li>--%>
-                <%--<li class="nav-item">--%>
-                    <%--<a class="nav-link font-blonde-script text-white font-size-h5" href="./thuc-don">Thực đơn</a>--%>
-                <%--</li>--%>
-                <%--<li class="nav-item">--%>
-                    <%--<a class="nav-link font-blonde-script text-white font-size-h5" href="./tat-ca-mon-an">Món ăn</a>--%>
-                <%--</li><li class="nav-item">--%>
-                <%--<a class="nav-link font-blonde-script text-white font-size-h5" href="./tat-ca-mon-an">Đặt món nhóm</a>--%>
-            <%--</li>--%>
-                <%--<li class="nav-item">--%>
-                    <%--<a class="nav-link font-blonde-script text-white font-size-h5" href="./tin-tuc">Bài viết</a>--%>
-                <%--</li>--%>
-                <%--<li class="nav-item">--%>
-                    <%--<a class="nav-link font-blonde-script text-white font-size-h5" href="./gioi-thieu">Nhà hàng</a>--%>
-                <%--</li>--%>
-                <%--<li class="nav-item">--%>
-                    <%--<a class="nav-link font-blonde-script text-white font-size-h5" href="./dat-ban">Đặt bàn</a>--%>
-                <%--</li>--%>
-                <%--<li class="nav-item">--%>
-                    <%--<a class="nav-link font-blonde-script text-white font-size-h5" href="./lien-he">Liên hệ</a>--%>
-                <%--</li>--%>
-            <%--</ul>--%>
-            <%--<form class="form-inline my-2 my-lg-0">--%>
-                <%--<div class="input-group">--%>
-                    <%--<input type="text" class="form-control" placeholder="Nhập thông tin tìm kiếm"--%>
-                            <%--id="txt-tim-kiem"/>--%>
-                    <%--<div class="input-group-append">--%>
-                        <%--<input class="btn btn-info" type="submit" value="Tìm" id="btn-tim-kiem"/>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-            <%--</form>--%>
-
-        <%--</div>--%>
-    <%--</nav>--%>
-    <%--<nav aria-label="breadcrumb">--%>
-        <%--<ol class="breadcrumb">--%>
-            <%--<li class="breadcrumb-item"><a href="/trang-chu">Trang chủ</a></li>--%>
-            <%--<li class="breadcrumb-item"><a href="#">Giỏ hàng</a></li>--%>
-            <%--<li class="breadcrumb-item active" aria-current="page">--%>
-                <%--Giỏ hàng--%>
-            <%--</li>--%>
-        <%--</ol>--%>
-    <%--</nav>--%>
-<%--</div>--%>
-
-
 <div class="container">
     <c:choose>
         <c:when test="${requestScope.gioHangRong}">
-            <h4 style="text-align: center; margin: 64px auto;">Giỏ hàng hiện tại rỗng, hãy <a href="/tat-ca-mon-an">chọn món ăn</a> và thêm vào giỏ</h4>
+            <h4 style="text-align: center; margin: 64px auto;">Giỏ hàng hiện tại rỗng, hãy <a href="tat-ca-mon-an">chọn món ăn</a> và thêm vào giỏ</h4>
         </c:when>
         <c:otherwise>
-            <form action="/xoa-gio-hang" method="post">
+            <form action="xoa-gio-hang" method="post">
                 <table class="table">
                     <thead class="font-size-h5">
                     <tr>
@@ -143,7 +81,7 @@
                     <button class="btn btn-success" id="btnUpdate" type="submit"
                             style="margin-right: 16px;">Xóa giỏ hàng
                     </button>
-                    <a href="/tat-ca-mon-an" class="btn btn-primary">Mua món khác</a>
+                    <a href="tat-ca-mon-an" class="btn btn-primary">Mua món khác</a>
                 </div>
             </form>
         </c:otherwise>
@@ -259,7 +197,7 @@
 
 <script type="text/javascript">
     function xoaKhoiGioHang(idMonAn) {
-        $.post("/xoa-mon-an-trong-gio-hang", { txtIdMon: idMonAn }, content => {
+        $.post("xoa-mon-an-trong-gio-hang", { txtIdMon: idMonAn }, content => {
             if (content === "true") {
                 location.href = "/gio-hang";
             }
@@ -268,7 +206,7 @@
 
     $(".txt-so-luong").blur((e) => {
         let idMonAn = $(e.target).data("id");
-        $.post("/cap-nhat-gio-hang", {
+        $.post("cap-nhat-gio-hang", {
             txtIdMon: idMonAn,
             txtSoLuong: $(e.target).val()
         }, content => {

@@ -63,7 +63,7 @@
                             <div class="text">${datBan.soDT}</div>
                         </td>
                         <td>
-                            <a href="/admin/xoa-dat-ban?email=${datBan.email}">Xóa</a>
+                            <a href="admin-xoa-dat-ban?email=${datBan.email}">Xóa</a>
                         </td>
                     </tr>
                 </c:forEach>

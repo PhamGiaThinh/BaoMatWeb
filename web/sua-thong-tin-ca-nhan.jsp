@@ -64,26 +64,26 @@
                         <!-- <div class="profile-usertitle-job">Web Developer</div> -->
                     </div>
                     <div class="profile-userbuttons">
-                        <a href="/trang-chu" class="btn btn-success">
+                        <a href="trang-chu" class="btn btn-success">
                             Trang chủ
                         </a>
-                        <a href="/dang-xuat" class="btn btn-danger">
+                        <a href="dang-xuat" class="btn btn-danger">
                             Thoát ra
                         </a>
                     </div>
                     <div class="profile-usermenu">
 
-                        <a href="/sua-thong-tin-ca-nhan" class="btn btn-success" style="width: 100%; margin-top: 4px">
+                        <a href="sua-thong-tin-ca-nhan" class="btn btn-success" style="width: 100%; margin-top: 4px">
                             Sửa thông tin các nhân
                         </a>
-                        <a href="/doi-mat-khau" class="btn btn-primary" style="width: 100%; margin-top: 4px">
+                        <a href="doi-mat-khau" class="btn btn-primary" style="width: 100%; margin-top: 4px">
                             Đổi mật khẩu
                         </a>
                     </div>
                 </div>
             </div>
             <div class="col-md-9">
-                <form action="/sua-thong-tin-ca-nhan" method="post" enctype="multipart/form-data">
+                <form action="sua-thong-tin-ca-nhan" method="post" enctype="multipart/form-data">
                     <div class="profile-content">
                         <h2>Sửa thông tin cá nhân</h2>
                         <div class="row">
@@ -179,7 +179,7 @@
         <div class="container-fluid">
             <div class="footer-title">
                 <h1 class="font-blonde-script">Liên hệ</h1>
-                <img src="assests/images/logo.png" height="100" width="100"/>
+                <img src="assests/images/logo.png" height="100" width="100" alt=""/>
                 <p>
                     <i
                     >Lorem Ipsum is simply dummy text of the printing and

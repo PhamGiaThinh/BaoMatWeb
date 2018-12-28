@@ -38,7 +38,7 @@
 }
 
 #footer {
-    background-image: url("/assests/images/footer-img.jpg");
+    background-image: url("../../assests/images/footer-img.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 64px 0;

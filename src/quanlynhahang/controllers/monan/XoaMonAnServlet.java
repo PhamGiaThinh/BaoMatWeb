@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "XoaMonAnServlet", urlPatterns = {"/admin/xoa-mon-an"})
+@WebServlet(name = "XoaMonAnServlet", urlPatterns = {"/admin-xoa-mon-an"})
 public class XoaMonAnServlet extends HttpServlet implements ActionPermissionID {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
@@ -49,7 +49,7 @@ public class XoaMonAnServlet extends HttpServlet implements ActionPermissionID {
             e.printStackTrace();
         }
 
-        response.sendRedirect("/admin/mon-an");
+        response.sendRedirect("admin-mon-an");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

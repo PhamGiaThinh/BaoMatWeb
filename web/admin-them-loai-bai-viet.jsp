@@ -8,7 +8,7 @@
     <div class="card-body">
         <h2 class="card-title">Thêm loại bài viết</h2>
         <p class="card-description">Vui lòng cung cấp đủ các thông tin sau</p>
-        <form class="forms-sample" action="/admin/them-loai-bai-viet" method="post">
+        <form class="forms-sample" action="admin-them-loai-bai-viet" method="post">
             <div class="form-row">
                 <label for="ten">Tên loại bài viết</label>
                 <input type="text" class="form-control" id="ten" placeholder="Tên loại bài viết" name="txtTenLoai">
@@ -21,7 +21,7 @@
             </div>
             <div class="form-row justify-content-center">
                 <input type="submit" value="Thêm" class="btn btn-primary btn-rounded">
-                <a href="/admin/loai-bai-viet" class="btn btn-success btn-rounded">Hủy bỏ</a>
+                <a href="admin-loai-bai-viet" class="btn btn-success btn-rounded">Hủy bỏ</a>
             </div>
         </form>
     </div>

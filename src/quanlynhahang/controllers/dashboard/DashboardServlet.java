@@ -20,7 +20,7 @@ public class DashboardServlet extends HttpServlet {
             return;
         }
         if (userDbConnect.getHostName() == null || userDbConnect.getPort() == null) {
-            response.sendRedirect("/admin/ket-noi-database");
+            response.sendRedirect("admin-ket-noi-database");
             return;
         }
 

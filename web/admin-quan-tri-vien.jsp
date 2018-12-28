@@ -9,7 +9,7 @@
         <h2 class="card-title">Quản lý quản trị viên</h2>
         <div class="row">
             <div class="col-sm-12 col-md-6">
-                <a href="/admin/them-quan-tri-vien" class="btn btn-primary btn-rounded">Thêm mới</a>
+                <a href="admin-them-quan-tri-vien" class="btn btn-primary btn-rounded">Thêm mới</a>
             </div>
             <div class="col-sm-12 col-md-6">
                 <input type="search" class="form-control" placeholder="Tìm kiếm quản trị viên"
@@ -47,9 +47,9 @@
                     </td>
                     <td>${qtv.dienThoai}</td>
                     <td>
-                        <a href="/admin/xem-quan-tri-vien?email=${qtv.email}">Xem</a> |
-                        <a href="/admin/xoa-quan-tri-vien?email=${qtv.email}">Xóa</a> |
-                        <a href="/admin/phan-quyen?email=${qtv.email}">Phân quyền</a>
+                        <a href="admin-xem-quan-tri-vien?email=${qtv.email}">Xem</a> |
+                        <a href="admin-xoa-quan-tri-vien?email=${qtv.email}">Xóa</a> |
+                        <a href="admin-phan-quyen?email=${qtv.email}">Phân quyền</a>
                     </td>
                 </tr>
             </c:forEach>

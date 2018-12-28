@@ -33,7 +33,7 @@
                                 <p id="validate-message" class="text-danger">${requestScope.message}</p>
                                 <h2>Đăng ký tài khoản</h2>
                                 <h4 class="font-weight-light">Xác nhận đăng ký</h4>
-                                <form action="/xac-nhan-dang-ky" method="post">
+                                <form action="xac-nhan-dang-ky" method="post">
                                     <div class="form-group">
                                         <label for="txt-code">Nhập mã xác nhận đã được gửi đến email của bản</label>
                                         <input type="text" name="txtCode" class="form-control" id="txt-code"

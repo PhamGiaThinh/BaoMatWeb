@@ -40,7 +40,7 @@ public class DangNhapServlet extends HttpServlet {
                     response.sendRedirect(previousPage);
                     return;
                 }
-                response.sendRedirect("/trang-chu");
+                response.sendRedirect("trang-chu");
                 return;
             }
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/dang-nhap.jsp");

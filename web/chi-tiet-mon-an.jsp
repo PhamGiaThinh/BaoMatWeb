@@ -93,7 +93,7 @@
                     <div class="clearfix"></div>
                 </div>
                 <div class="danhgia">
-                    <form action="/binh-luan-nguoi-dung" method="post">
+                    <form action="binh-luan-nguoi-dung" method="post">
                         <input type="hidden" name="txtIdMonAn" value="${requestScope.monAn.idMonAn}">
                         <textarea class="form-control" rows="3" id="comment"
                                   placeholder="Nhập góp ý của quý khách" name="comment"></textarea>
@@ -131,12 +131,6 @@
                         </div>
                     </c:forEach>
                 </div>
-
-                <%--<div>--%>
-                <%--<a href="#!" class="btn-flat waves-effect green-text" id="btn-read-all-cmt">--%>
-                <%--<b>ĐỌC TẤT CẢ BÌNH LUẬN</b>--%>
-                <%--</a>--%>
-                <%--</div>--%>
             </div>
 
         </div>
@@ -146,7 +140,7 @@
             <div class="row">
                 <c:forEach var="monAn" items="${requestScope.listMonAn}">
                     <div class="food-item col-md-3 col-sm-6 col-12">
-                        <a href="/chi-tiet-mon-an?idMonAn=${monAn.idMonAn}">
+                        <a href="chi-tiet-mon-an?idMonAn=${monAn.idMonAn}">
                             <div class="food-img">
                                 <img src="${monAn.hinhMonAn}" width="175px" height="175px"/>
                             </div>
@@ -255,10 +249,10 @@
 
 <script>
     $("#them-vao-gio-hang").click(() => {
-        $.post("/them-vao-gio-hang", {
+        $.post("them-vao-gio-hang", {
             txtIdMon: $("#txt-id-mon-an").val(),
             txtSoLuong: $("#txt-so-luong").val()
-        }, content => $("#area-mon-an").append("<p>" + content + "</p>"));
+        }, content => $("#area-mon-an").html("<p>" + content + "</p>"));
     });
 
     $("#button-add").click(() => {

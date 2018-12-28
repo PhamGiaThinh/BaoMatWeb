@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "GetMoTaNghiepVuPostAjax", urlPatterns = { "/admin/ajax-get-mo-ta-nghiep-vu" })
+@WebServlet(name = "GetMoTaNghiepVuPostAjax", urlPatterns = { "/admin-ajax-get-mo-ta-nghiep-vu" })
 public class GetMoTaNghiepVuPostAjax extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");

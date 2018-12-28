@@ -9,7 +9,7 @@
         <h2 class="card-title">Loại bài viết</h2>
         <div class="row">
             <div class="col-sm-12 col-md-6">
-                <a href="/admin/them-loai-bai-viet" class="btn btn-primary btn-rounded">Thêm loại bài viết</a>
+                <a href="admin-them-loai-bai-viet" class="btn btn-primary btn-rounded">Thêm loại bài viết</a>
             </div>
             <div class="col-sm-12 col-md-6">
                 <input type="search" class="form-control" placeholder="Search"
@@ -30,8 +30,8 @@
                         <td>${loaiBaiViet.tenLoaiBaiViet}</td>
                         <td>${loaiBaiViet.moTa}</td>
                         <td>
-                            <a href="/admin/sua-loai-bai-viet?idLoaiBaiViet=${loaiBaiViet.idLoaiBaiViet}">Sửa</a> |
-                            <a href="/admin/xoa-loai-bai-viet?idLoaiBaiViet=${loaiBaiViet.idLoaiBaiViet}">Xóa</a>
+                            <a href="admin-sua-loai-bai-viet?idLoaiBaiViet=${loaiBaiViet.idLoaiBaiViet}">Sửa</a> |
+                            <a href="admin-xoa-loai-bai-viet?idLoaiBaiViet=${loaiBaiViet.idLoaiBaiViet}">Xóa</a>
                         </td>
                     </tr>
                 </c:forEach>

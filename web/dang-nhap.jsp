@@ -32,7 +32,7 @@
                             <div class="auth-form-light text-left p-5">
                                 <h2>Đăng nhập</h2>
                                 <h4 class="font-weight-light">Chào mừng đến với website Nhà hàng</h4>
-                                <form class="pt-5" action="/dang-nhap" method="post">
+                                <form class="pt-5" action="dang-nhap" method="post">
                                     <div class="form-group">
                                         <label for="email">Email</label>
                                         <input type="email" name="txtEmail" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Nhập email" value="${requestScope.txtEmail}">
@@ -48,7 +48,7 @@
                                     </div>
                                     <div class="mt-3 text-center">
                                         <p>${requestScope.message}</p>
-                                        <a href="/quen-mat-khau" class="auth-link text-black">Quên mật khẩu?</a>
+                                        <a href="quen-mat-khau" class="auth-link text-black">Quên mật khẩu?</a>
                                     </div>
                                 </form>
                             </div>

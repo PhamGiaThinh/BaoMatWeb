@@ -8,22 +8,16 @@
     <div class="card-body">
         <h2 class="card-title">Sửa nghiệp vụ: ${nghiepVu.tenNghiepVu}</h2>
         <p class="card-description">Vui lòng cung cấp đủ các thông tin sau</p>
-        <form action="/admin/sua-nghiep-vu" method="post">
+        <form action="admin-sua-nghiep-vu" method="post">
             <input type="hidden" value="${nghiepVu.idNghiepVu}" name="txtIdNghiepVu">
             <div class="form-row">
                 <label for="ten">Tên nghiệp vụ</label>
                 <input type="text" class="form-control" id="ten" placeholder="Tên nghiệp vụ" name="txtTenNghiepVu" value="${nghiepVu.tenNghiepVu}">
                 <small class="text-danger" id="validate-ten"></small>
             </div>
-            <!--<div class="form-row">
-                <label for="mo-ta">Mô tả</label>
-                <input type="text" class="form-control" id="mo-ta" placeholder="Mô tả" name="txtMoTa" value="">
-                <small class="text-danger" id="validate-mo-ta"></small>
-            </div>-->
-
             <div class="form-row justify-content-center">
                 <input type="submit" value="Lưu lại" class="btn btn-primary btn-rounded">
-                <a href="/admin/nghiep-vu" class="btn btn-success btn-rounded">Hủy bỏ</a>
+                <a href="admin-nghiep-vu" class="btn btn-success btn-rounded">Hủy bỏ</a>
             </div>
         </form>
     </div>

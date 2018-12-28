@@ -160,17 +160,17 @@
     <div class="col-9 contact-bar-functions">
         <c:choose>
             <c:when test="${sessionScope.nguoiDungHienTai != null}">
-                <a href="/sua-thong-tin-ca-nhan">Chào
+                <a href="sua-thong-tin-ca-nhan">Chào
                     mừng ${sessionScope.nguoiDungHienTai.hoDem} ${sessionScope.nguoiDungHienTai.ten} đến với website</a>
-                <a href="/dang-xuat">Đăng xuất</a>
+                <a href="dang-xuat">Đăng xuất</a>
                 <c:if test="${sessionScope.nguoiDungHienTai.quanTriVien}">
-                    <a href="/admin/ket-noi-database">Quản trị</a>
+                    <a href="admin/ket-noi-database">Quản trị</a>
                 </c:if>
-                <a href="/gio-hang">Giỏ hàng</a>
+                <a href="gio-hang">Giỏ hàng</a>
             </c:when>
             <c:otherwise>
-                <a href="/dang-nhap">Đăng nhập</a>
-                <a href="/dang-ky">Đăng ký</a>
+                <a href="dang-nhap">Đăng nhập</a>
+                <a href="dang-ky">Đăng ký</a>
             </c:otherwise>
         </c:choose>
     </div>
@@ -189,32 +189,32 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link font-blonde-script text-white font-size-h5" href="/trang-chu">Trang chủ
+                <a class="nav-link font-blonde-script text-white font-size-h5" href="trang-chu">Trang chủ
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-blonde-script text-white font-size-h5" href="/thuc-don">Thực đơn</a>
+                <a class="nav-link font-blonde-script text-white font-size-h5" href="thuc-don">Thực đơn</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-blonde-script text-white font-size-h5" href="/tat-ca-mon-an">Món ăn</a>
+                <a class="nav-link font-blonde-script text-white font-size-h5" href="tat-ca-mon-an">Món ăn</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-blonde-script text-white font-size-h5" href="/dat-mon-nhom">Đặt món nhóm</a>
+                <a class="nav-link font-blonde-script text-white font-size-h5" href="dat-mon-nhom">Đặt món nhóm</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-blonde-script text-white font-size-h5" href="/bai-viet">Bài
+                <a class="nav-link font-blonde-script text-white font-size-h5" href="tin-tuc">Bài
                     viết</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-blonde-script text-white font-size-h5" href="/gioi-thieu">Nhà
+                <a class="nav-link font-blonde-script text-white font-size-h5" href="gioi-thieu">Nhà
                     hàng</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-blonde-script text-white font-size-h5" href="/dat-ban">Đặt bàn</a>
+                <a class="nav-link font-blonde-script text-white font-size-h5" href="dat-ban">Đặt bàn</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-blonde-script text-white font-size-h5" href="/lien-he">Liên hệ</a>
+                <a class="nav-link font-blonde-script text-white font-size-h5" href="lien-he">Liên hệ</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -259,15 +259,15 @@
                         <div class="profile-usertitle-name">${sessionScope.hoDem} ${sessionScope.ten}</div>
                     </div>
                     <div class="profile-userbuttons">
-                        <a href="/trang-chu" class="btn btn-success btn-sm">Trang chủ</a>
-                        <a href="/sua-thong-tin-ca-nhan" class="btn btn-danger btn-sm">Hủy bỏ</a>
+                        <a href="trang-chu" class="btn btn-success btn-sm">Trang chủ</a>
+                        <a href="sua-thong-tin-ca-nhan" class="btn btn-danger btn-sm">Hủy bỏ</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-9">
                 <div class="profile-content">
                     <h2 class="justify-content-center">Đổi mật khẩu</h2>
-                    <form action="/doi-mat-khau" method="post">
+                    <form action="doi-mat-khau" method="post">
                         <div class="form-group">
                             <label for="mat-khau">Mật khẩu cũ</label>
                             <input type="password" name="txtMatKhau" id="mat-khau" class="form-control"

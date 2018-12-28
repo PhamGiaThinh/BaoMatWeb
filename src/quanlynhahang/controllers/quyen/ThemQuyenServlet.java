@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "ThemQuyenServlet" , urlPatterns = {"/admin/them-quyen"})
+@WebServlet(name = "ThemQuyenServlet" , urlPatterns = {"/admin-them-quyen"})
 public class ThemQuyenServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -31,7 +31,7 @@ public class ThemQuyenServlet extends HttpServlet {
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-        response.sendRedirect("/admin/quyen");
+        response.sendRedirect("admin-quyen");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

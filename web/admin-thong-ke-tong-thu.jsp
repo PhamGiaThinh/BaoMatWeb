@@ -117,7 +117,7 @@
         <br>
         <h1 class="text-center text-danger">Tổng thu từng tháng</h1>
         <div id="chart_2"></div>
-        <form action="/admin/chi-tiet-tong-thu-theo-thang" method="post">
+        <form action="admin-chi-tiet-tong-thu-theo-thang" method="post">
             <div class="form-group">
                 <label>Xem chi tiết tổng thu của tháng:</label>
                 <select name="thang" id="tong-thu-theo-thang" class="form-control">
@@ -182,7 +182,7 @@
 <script>
     function xuatBaoCao(thang) {
         $("#btn-bao-cao").html("Đang tạo file");
-        $.get("/admin/excel-report/doanh-thu-theo-thang", { thang: thang }, content => {
+        $.get("admin-excel-report-doanh-thu-theo-thang", { thang: thang }, content => {
             if (content.res !== null) {
                 $("#btn-bao-cao").attr("onclick", "downloadReport('" + content.res + "')");
                 $("#btn-bao-cao").html("Tải xuống");
@@ -191,7 +191,7 @@
     }
 
     function downloadReport(fileName) {
-        let url = "/document/download?fileName=" + fileName;
+        let url = "document-download?fileName=" + fileName;
         window.open(url, "_blank");
     }
 </script>

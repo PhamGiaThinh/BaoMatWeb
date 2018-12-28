@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "XoaLoaiMonServlet", urlPatterns = {"/admin/xoa-loai-mon"})
+@WebServlet(name = "XoaLoaiMonServlet", urlPatterns = {"/admin-xoa-loai-mon"})
 public class XoaLoaiMonServlet extends HttpServlet implements ActionPermissionID {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
@@ -39,7 +39,7 @@ public class XoaLoaiMonServlet extends HttpServlet implements ActionPermissionID
             LoaiMonService service = new LoaiMonService(DbAccess.getValue(request));
             service.delete(Integer.parseInt(id));
 
-            response.sendRedirect("/admin/loai-mon");
+            response.sendRedirect("admin-loai-mon");
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }

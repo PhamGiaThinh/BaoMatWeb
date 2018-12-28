@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-@WebServlet(name = "DatBanServlet" , urlPatterns = { "/admin/dat-ban" })
+@WebServlet(name = "DatBanServlet" , urlPatterns = { "/admin-dat-ban" })
 public class DatBanServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

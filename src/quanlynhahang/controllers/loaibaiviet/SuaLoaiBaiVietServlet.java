@@ -15,21 +15,21 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "SuaLoaiBaiVietServlet", urlPatterns = { "/admin/sua-loai-bai-viet" })
+@WebServlet(name = "SuaLoaiBaiVietServlet", urlPatterns = { "/admin-sua-loai-bai-viet" })
 public class SuaLoaiBaiVietServlet extends HttpServlet implements ActionPermissionID{
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,IOException {
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=UTF-8");
         try {
-//            if (!AuthorizePermission.checkLogined(request)) {
-//                response.sendError(404);
-//                return;
-//            }
-//
-//            if (!AuthorizePermission.checkPermissionAllowed(request, getPermissionId())){
-//                response.sendError(401);
-//                return;
-//            }
+            if (!AuthorizePermission.islogined(request)) {
+                response.sendError(404);
+                return;
+            }
+
+            if (!AuthorizePermission.checkPermissionAllowed(request, getPermissionId())){
+                response.sendError(401);
+                return;
+            }
             LoaiBaiViet loaiBaiViet = new LoaiBaiViet();
             loaiBaiViet.setIdLoaiBaiViet(Integer.parseInt(request.getParameter("txtIdLoai")));
             loaiBaiViet.setTenLoaiBaiViet(request.getParameter("txtTenLoai"));
@@ -37,7 +37,7 @@ public class SuaLoaiBaiVietServlet extends HttpServlet implements ActionPermissi
 
             LoaiBaiVietService service = new LoaiBaiVietService(DbAccess.getValue(request));
             service.modify(loaiBaiViet);
-            response.sendRedirect("/admin/loai-bai-viet");
+            response.sendRedirect("admin-loai-bai-viet");
 
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -45,16 +45,16 @@ public class SuaLoaiBaiVietServlet extends HttpServlet implements ActionPermissi
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-//            if(AuthorizePermission.checkLogined(request))
-//            {
-//                response.sendError(404);
-//                return;
-//            }
-//            if(AuthorizePermission.checkPermissionAllowed(request,getPermissionId()))
-//            {
-//                response.sendError(401);
-//                return;
-//            }
+            if(AuthorizePermission.islogined(request))
+            {
+                response.sendError(404);
+                return;
+            }
+            if(AuthorizePermission.checkPermissionAllowed(request,getPermissionId()))
+            {
+                response.sendError(401);
+                return;
+            }
             String idLoaiBaiViet = request.getParameter("idLoaiBaiViet");
             if (idLoaiBaiViet == null || idLoaiBaiViet.trim().equals("")) {
                 response.setStatus(400);

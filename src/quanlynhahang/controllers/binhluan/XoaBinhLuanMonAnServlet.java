@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "XoaBinhLuanMonAnServlet", urlPatterns = {"/admin/xoa-binh-luan-mon-an"})
+@WebServlet(name = "XoaBinhLuanMonAnServlet", urlPatterns = {"/admin-xoa-binh-luan-mon-an"})
 public class XoaBinhLuanMonAnServlet extends HttpServlet implements ActionPermissionID {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
@@ -23,10 +23,10 @@ public class XoaBinhLuanMonAnServlet extends HttpServlet implements ActionPermis
                 return;
             }
 
-//            if (!AuthorizePermission.checkPermissionAllowed(request, getPermissionId())) {
-//                response.sendError(401);
-//                return;
-//            }
+            if (!AuthorizePermission.checkPermissionAllowed(request, getPermissionId())) {
+                response.sendError(401);
+                return;
+            }
             String idMonAn = request.getParameter("idMonAn");
             if (idMonAn == null) {
                 response.setStatus(400);
@@ -43,7 +43,7 @@ public class XoaBinhLuanMonAnServlet extends HttpServlet implements ActionPermis
 
             binhLuanService.deleteBinhLuanMonAn(Integer.parseInt(idMonAn), Integer.parseInt(idBinhLuan));
 
-            response.sendRedirect("/admin/mon-an");
+            response.sendRedirect("admin-mon-an");
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }

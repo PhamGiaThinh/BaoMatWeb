@@ -14,7 +14,7 @@
         <h2 class="card-title">Quản Lý Loại Món</h2>
         <div class="row">
             <div class="col-sm-12 col-md-6">
-                <a href="/admin/them-loai-mon" class="btn btn-primary btn-rounded">Thêm loại món</a>
+                <a href="admin-them-loai-mon" class="btn btn-primary btn-rounded">Thêm loại món</a>
             </div>
             <div class="col-sm-12 col-md-6">
                 <input type="search" class="form-control" placeholder="Search"
@@ -37,9 +37,9 @@
                         <td>${loaimon.tenLoaiMon}</td>
                         <td>${loaimon.moTa}</td>
                         <td>
-                            <a href="/admin/xem-loai-mon?idLoaiMon=${loaimon.idLoaiMon}">Xem</a> |
-                            <a href="/admin/sua-loai-mon?idLoaiMon=${loaimon.idLoaiMon}">Sửa</a> |
-                            <a href="/admin/xoa-loai-mon?idLoaiMon=${loaimon.idLoaiMon}">Xóa</a>
+                            <a href="admin-xem-loai-mon?idLoaiMon=${loaimon.idLoaiMon}">Xem</a> |
+                            <a href="admin-sua-loai-mon?idLoaiMon=${loaimon.idLoaiMon}">Sửa</a> |
+                            <a href="admin-xoa-loai-mon?idLoaiMon=${loaimon.idLoaiMon}">Xóa</a>
                         </td>
                     </tr>
                 </c:forEach>

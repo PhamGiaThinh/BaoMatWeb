@@ -9,7 +9,7 @@
 <div class="card" style="margin: 16px 0;">
     <div class="card-body">
         <h3 class="card-title">Sửa Thông Tin Món Ăn : ${requestScope.monAn.tenMonAn}</h3>
-        <form class="forms-sample" action="/admin/sua-mon-an" method="post" enctype="multipart/form-data" >
+        <form class="forms-sample" action="admin-sua-mon-an" method="post" enctype="multipart/form-data" >
             <div class="form-row">
                 <div class="col-md-6 col-sm-12 form-group">
                     <input type="hidden" name="txtIdMonAn" value="${requestScope.monAn.idMonAn}">
@@ -33,7 +33,7 @@
             </div>
             <div class="form-group">
                 <label>Mô Tả Chi Tiết</label>
-                <textarea class="form-control"rows="5"
+                <textarea class="form-control" rows="5"
                           placeholder="Mô Tả Chi Tiết" name="txtMoTaChiTiet">${requestScope.monAn.moTaChiTiet}</textarea>
                 <small class="text-danger" ></small>
             </div>
@@ -129,7 +129,7 @@
             <br>
             <div class="form-row justify-content-center">
                 <input type="submit" class="btn btn-primary btn-rounded" id="btn-submit" value="Lưu"/> &nbsp;
-                <a href="/admin/mon-an" class="btn btn-success btn-rounded"> Hủy bỏ</a>
+                <a href="admin-mon-an" class="btn btn-success btn-rounded"> Hủy bỏ</a>
             </div>
         </form>
     </div>

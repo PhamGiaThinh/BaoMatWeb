@@ -9,7 +9,7 @@
         <p class="card-description">
             Vui lòng nhập đầy đủ thông tin yêu cầu
         </p>
-        <form action="/admin/them-nghiep-vu" method="post">
+        <form action="admin-them-nghiep-vu" method="post">
             <div class="form-row">
                 <label for="ten">Tên nghiệp vụ</label>
                 <input type="text" class="form-control" id="ten" placeholder="Tên nghiệp vụ" name="txtTenNghiepVu">
@@ -17,7 +17,7 @@
             </div>
             <div class="form-row justify-content-center">
                 <input type="submit" value="Thêm" class="btn btn-primary btn-rounded">
-                <a href="/admin/nghiep-vu" class="btn btn-success btn-rounded">Hủy bỏ</a>
+                <a href="admin-nghiep-vu" class="btn btn-success btn-rounded">Hủy bỏ</a>
             </div>
         </form>
     </div>
@@ -46,22 +46,6 @@
     }
 
     $("#ten").blur(() => validateForTen());
-
-
-
-    /*    function validateForMota() {
-            let mota = $("#mota").val().trim();
-            if (mota === "") {
-                $("#validate-mota").html("Bạn chưa nhập mô tả");
-                return false;
-            }
-            $("#validate-mota").html("");
-            return true;
-        }
-        $("#mota").blur(() => validateForMota());
-        */
-
-
 
     $("#btn-submit").click(() => {
         let res = validateForIDQuyen() & validateForTen() & validateForMota() & validateForIDNghiepVu();

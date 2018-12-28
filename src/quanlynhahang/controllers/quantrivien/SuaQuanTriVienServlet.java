@@ -16,7 +16,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-@WebServlet(name = "SuaQuanTriVienServlet", urlPatterns = {"/admin/sua-quan-tri-vien"})
+@WebServlet(name = "SuaQuanTriVienServlet", urlPatterns = {"/admin-sua-quan-tri-vien"})
 public class SuaQuanTriVienServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
@@ -48,7 +48,7 @@ public class SuaQuanTriVienServlet extends HttpServlet {
             e.printStackTrace();
             response.sendError(500);
         }
-        response.sendRedirect("/admin/quan-tri-vien");
+        response.sendRedirect("admin-quan-tri-vien");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

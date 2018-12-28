@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "XoaNguoiDungServlet", urlPatterns = { "/admin/xoa-nguoi-dung" })
+@WebServlet(name = "XoaNguoiDungServlet", urlPatterns = { "/admin-xoa-nguoi-dung" })
 public class XoaNguoiDungServlet extends HttpServlet implements ActionPermissionID {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
@@ -35,10 +35,9 @@ public class XoaNguoiDungServlet extends HttpServlet implements ActionPermission
             }
             NguoiDungService service = new NguoiDungService(DbAccess.getValue(request));
             service.delete(email);
-            response.sendRedirect("/admin/nguoi-dung");
+            response.sendRedirect("admin-nguoi-dung");
         } catch (Exception e) {
             e.printStackTrace();
-            response.sendError(500);
         }
     }
 

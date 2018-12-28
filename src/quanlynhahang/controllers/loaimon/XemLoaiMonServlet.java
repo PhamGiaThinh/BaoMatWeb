@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "XemLoaiMonServlet", urlPatterns = {"/admin/xem-loai-mon"})
+@WebServlet(name = "XemLoaiMonServlet", urlPatterns = {"/admin-xem-loai-mon"})
 public class XemLoaiMonServlet extends HttpServlet implements ActionPermissionID {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {

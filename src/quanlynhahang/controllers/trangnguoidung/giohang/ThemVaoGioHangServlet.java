@@ -18,7 +18,7 @@ public class ThemVaoGioHangServlet extends HttpServlet {
             response.setContentType("text/html;charset=UTF-8");
 
             if (!AuthorizePermission.islogined(request)) {
-                response.getWriter().println("Bạn hãy <a href='/dang-nhap'>đăng nhập</a> hoặc <a href='/dang-ky'>đăng ký tài khoản</a> để có thể đặt món");
+                response.getWriter().println("Bạn hãy <a href='dang-nhap'>đăng nhập</a> hoặc <a href='dang-ky'>đăng ký tài khoản</a> để có thể đặt món");
                 return;
             }
 
@@ -33,7 +33,7 @@ public class ThemVaoGioHangServlet extends HttpServlet {
             GioHang gioHang = new GioHang(request.getSession());
             gioHang.themMonAnVaoGioHang(Integer.parseInt(idMonAn), Integer.parseInt(soLuong));
 
-            response.getWriter().println("Đã thêm " + soLuong + " món ăn này vào. Vào <a href='/gio-hang'>Giỏ hàng</a> để xem chi tiết");
+            response.getWriter().println("Đã thêm " + soLuong + " món ăn này vào. Vào <a href='gio-hang'>Giỏ hàng</a> để xem chi tiết");
         } catch (Exception e) {
             e.printStackTrace();
             if (e.getMessage().equals("404")) {

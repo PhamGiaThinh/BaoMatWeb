@@ -17,8 +17,12 @@
 	Configure the location of uploaded files. See the following article for more details:
 	http://docs.cksource.com/CKFinder_2.x/Developers_Guide/Java/Configuration/baseURL_and_baseDir
 	-->
-	<baseDir>F:/BK11_12/WebProjectV6/web/assests/content/upload/</baseDir>
-	<baseURL>/assests/content/upload/</baseURL>
+	<!--<baseDir>localhost:8080/WebProjectFinal_war_exploded/assests/content/upload/</baseDir>-->
+	<!--<baseURL>/assests/content/upload/</baseURL>-->
+
+	<baseDir></baseDir>
+	<baseURL></baseURL>
+
 	<licenseKey></licenseKey>
 	<licenseName></licenseName>
 	<!--

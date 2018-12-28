@@ -34,10 +34,12 @@ public class QuenMatKhauServlet extends HttpServlet {
             NguoiDungService service = new NguoiDungService(DbAccess.getValue(request));
             service.suaMatKhaunguoiDung(emailTo, newPass);
 
-            Mailer.sendEmail(emailTo, subject, content);
+            Thread sendEmail = new Thread(() -> Mailer.sendEmail(emailTo, subject, content));
+            sendEmail.start();
+
             HttpSession session = request.getSession();
             session.setAttribute(Consts.FORGOT_PASSWORD_MSG, "Vui lòng kiểm tra email để lấy lại mật khẩu");
-            response.sendRedirect("/dang-nhap");
+            response.sendRedirect("dang-nhap");
         } catch (Exception e) {
             e.printStackTrace();
             response.getWriter().print(e.toString());

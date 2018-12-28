@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "XemNguoiDungServlet", urlPatterns = { "/admin/xem-nguoi-dung" })
+@WebServlet(name = "XemNguoiDungServlet", urlPatterns = { "/admin-xem-nguoi-dung" })
 public class XemNguoiDungServlet extends HttpServlet implements ActionPermissionID {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {

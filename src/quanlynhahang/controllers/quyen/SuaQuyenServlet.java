@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "SuaQuyenServlet" , urlPatterns = {"/admin/sua-quyen"})
+@WebServlet(name = "SuaQuyenServlet" , urlPatterns = {"/admin-sua-quyen"})
 public class SuaQuyenServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
@@ -26,7 +26,7 @@ public class SuaQuyenServlet extends HttpServlet {
             quyen.setIdNghiepVu(Integer.parseInt(request.getParameter("txtIdNghiepVu")));
             QuyenService service=new QuyenService(DbAccess.getValue(request));
             service.modify(quyen);
-            response.sendRedirect("/admin/sua-quyen");
+            response.sendRedirect("admin-sua-quyen");
         }catch (SQLException | ClassNotFoundException e){
             e.printStackTrace();
 

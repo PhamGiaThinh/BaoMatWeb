@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "XoaBaiVietServlet", urlPatterns = { "/admin/xoa-bai-viet" })
+@WebServlet(name = "XoaBaiVietServlet", urlPatterns = { "/admin-xoa-bai-viet" })
 public class XoaBaiVietServlet extends HttpServlet implements ActionPermissionID {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
@@ -43,7 +43,7 @@ public class XoaBaiVietServlet extends HttpServlet implements ActionPermissionID
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-        response.sendRedirect("/admin/bai-viet");
+        response.sendRedirect("admin-bai-viet");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

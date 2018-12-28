@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 
-@WebServlet(name = "FilterMonAnAjax", urlPatterns = {"/admin/ajax-filter-mon-an"})
+@WebServlet(name = "FilterMonAnAjax", urlPatterns = {"/admin-ajax-filter-mon-an"})
 public class FilterMonAnAjax extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");

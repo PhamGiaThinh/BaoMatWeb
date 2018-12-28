@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-@WebServlet(name = "LienHeServlet" , urlPatterns = {"/admin/lien-he"})
+@WebServlet(name = "LienHeServlet" , urlPatterns = {"/admin-lien-he"})
 public class LienHeServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

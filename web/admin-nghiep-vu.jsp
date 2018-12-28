@@ -9,7 +9,7 @@
         <h2 class="card-title">Quản lý nghiệp vụ</h2>
         <div class="row">
             <div class="col-sm-12 col-md-6">
-                <a href="/admin/them-nghiep-vu" class="btn btn-primary btn-rounded">Thêm quyền</a>
+                <a href="admin-them-nghiep-vu" class="btn btn-primary btn-rounded">Thêm quyền</a>
             </div>
             <div class="col-sm-12 col-md-6">
                 <input type="search" class="form-control" placeholder="Search"
@@ -26,14 +26,14 @@
             </tr>
             </thead>
             <tbody>
-            <c:forEach var="nghiepvu" items="${nghiepVus}">
+            <c:forEach var="nghiepvu" items="${requestScope.nghiepVus}">
                 <tr>
                     <td>${nghiepvu.idNghiepVu}</td>
                     <td>${nghiepvu.tenNghiepVu}</td>
 
                     <td>
-                        <a href="/admin/sua-nghiep-vu?idNghiepVu=${nghiepvu.idNghiepVu}">Sửa</a> |
-                        <a href="/admin/xoa-nghiep-vu?idNghiepVu=${nghiepvu.idNghiepVu}">Xóa</a>
+                        <a href="admin-sua-nghiep-vu?idNghiepVu=${nghiepvu.idNghiepVu}">Sửa</a> |
+                        <a href="admin-xoa-nghiep-vu?idNghiepVu=${nghiepvu.idNghiepVu}">Xóa</a>
                     </td>
                 </tr>
             </c:forEach>

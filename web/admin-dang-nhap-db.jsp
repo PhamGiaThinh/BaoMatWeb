@@ -32,14 +32,14 @@
                             <div class="auth-form-light text-left p-5">
                                 <h2>Kết nối database</h2>
                                 <h4 class="font-weight-light">Chọn server để thực kết nối vào cơ sở dữ liệu</h4>
-                                <form class="pt-5" action="/admin/ket-noi-database" method="post">
+                                <form class="pt-5" action="admin-ket-noi-database" method="post">
                                     <div class="form-group">
-                                        <label for="server">Chọn server</label>
+                                        <label for="server">Database username</label>
                                         <input type="text" name="txtServer" class="form-control" id="server" placeholder="Nhập tên server muốn kết nối" value="${requestScope.server}">
                                     </div>
                                     <div class="form-group">
-                                        <label for="port">Port</label>
-                                        <input type="text" name="txtPort" class="form-control" id="port" value="1433">
+                                        <label for="port">Password</label>
+                                        <input type="password" name="txtPort" class="form-control" id="port">
                                     </div>
                                     <div class="mt-2 w-75 mx-auto">
                                         <div class="form-check form-check-flat">
@@ -54,7 +54,7 @@
                                             <input type="submit" class="btn btn-block btn-primary btn-rounded" value="Đăng nhập" />
                                         </div>
                                         <div class="col-md-6">
-                                            <a href="/trang-chu" class="btn btn-warning btn-rounded">Hủy bỏ</a>
+                                            <a href="trang-chu" class="btn btn-warning btn-rounded">Hủy bỏ</a>
                                         </div>
                                     </div>
                                 </form>

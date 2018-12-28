@@ -26,7 +26,7 @@ import java.util.Date;
 @MultipartConfig(fileSizeThreshold = 1024 * 1024 * 2,
         maxFileSize = 1024 * 1024 * 10,
         maxRequestSize = 1024 * 1024 * 50)
-@WebServlet(name = "SuaMonAnServlet", urlPatterns = {"/admin/sua-mon-an"})
+@WebServlet(name = "SuaMonAnServlet", urlPatterns = {"/admin-sua-mon-an"})
 public class SuaMonAnServlet extends HttpServlet implements ActionPermissionID {
     private String getFileName(final Part part) {
         final String partHeader = part.getHeader("content-disposition");
@@ -117,7 +117,7 @@ public class SuaMonAnServlet extends HttpServlet implements ActionPermissionID {
 
             MonAnService monAnService = new MonAnService(DbAccess.getValue(request));
             monAnService.modify(monAn);
-            response.sendRedirect("/admin/mon-an");
+            response.sendRedirect("admin-mon-an");
         } catch (SQLException | ClassNotFoundException | ParseException e) {
             e.printStackTrace();
         }

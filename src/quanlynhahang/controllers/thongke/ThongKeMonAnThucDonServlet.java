@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-@WebServlet(name = "ThongKeMonAnThucDonServlet", urlPatterns = {"/admin/mon-an-thuc-don"})
+@WebServlet(name = "ThongKeMonAnThucDonServlet", urlPatterns = {"/admin-mon-an-thuc-don"})
 public class ThongKeMonAnThucDonServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
@@ -28,9 +28,7 @@ public class ThongKeMonAnThucDonServlet extends HttpServlet {
 
             ArrayList<ThongKeThucDon> thongKeThucDons = thongKeService.thongKeSuDungThucDon();
             request.setAttribute("thongKeThucDon", thongKeThucDons);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

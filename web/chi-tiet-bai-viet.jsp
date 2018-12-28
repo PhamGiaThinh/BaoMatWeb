@@ -23,17 +23,17 @@
     <div class="col-9 contact-bar-functions">
         <c:choose>
             <c:when test="${sessionScope.nguoiDungHienTai != null}">
-                <a href="/sua-thong-tin-ca-nhan">Chào
+                <a href="sua-thong-tin-ca-nhan">Chào
                     mừng ${sessionScope.nguoiDungHienTai.hoDem} ${sessionScope.nguoiDungHienTai.ten} đến với website</a>
-                <a href="/dang-xuat">Đăng xuất</a>
+                <a href="dang-xuat">Đăng xuất</a>
                 <c:if test="${sessionScope.nguoiDungHienTai.quanTriVien}">
-                    <a href="/admin/ket-noi-database">Quản trị</a>
+                    <a href="admin/ket-noi-database">Quản trị</a>
                 </c:if>
-                <a href="/gio-hang">Giỏ hàng</a>
+                <a href="gio-hang">Giỏ hàng</a>
             </c:when>
             <c:otherwise>
-                <a href="/dang-nhap">Đăng nhập</a>
-                <a href="/dang-ky">Đăng ký</a>
+                <a href="dang-nhap">Đăng nhập</a>
+                <a href="dang-ky">Đăng ký</a>
             </c:otherwise>
         </c:choose>
     </div>
@@ -51,32 +51,32 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link font-blonde-script text-white font-size-h5" href="/trang-chu">Trang chủ
+                <a class="nav-link font-blonde-script text-white font-size-h5" href="trang-chu">Trang chủ
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-blonde-script text-white font-size-h5" href="/thuc-don">Thực đơn</a>
+                <a class="nav-link font-blonde-script text-white font-size-h5" href="thuc-don">Thực đơn</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-blonde-script text-white font-size-h5" href="/tat-ca-mon-an">Món ăn</a>
+                <a class="nav-link font-blonde-script text-white font-size-h5" href="tat-ca-mon-an">Món ăn</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-blonde-script text-white font-size-h5" href="/dat-mon-nhom">Đặt món nhóm</a>
+                <a class="nav-link font-blonde-script text-white font-size-h5" href="dat-mon-nhom">Đặt món nhóm</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-blonde-script text-white font-size-h5" href="/bai-viet">Bài
+                <a class="nav-link font-blonde-script text-white font-size-h5" href="tin-tuc">Bài
                     viết</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-blonde-script text-white font-size-h5" href="/gioi-thieu">Nhà
+                <a class="nav-link font-blonde-script text-white font-size-h5" href="gioi-thieu">Nhà
                     hàng</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-blonde-script text-white font-size-h5" href="/dat-ban">Đặt bàn</a>
+                <a class="nav-link font-blonde-script text-white font-size-h5" href="dat-ban">Đặt bàn</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link font-blonde-script text-white font-size-h5" href="/lien-he">Liên hệ</a>
+                <a class="nav-link font-blonde-script text-white font-size-h5" href="lien-he">Liên hệ</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -96,20 +96,21 @@
             <h5>Tin tức liên quan</h5>
             <hr>
             <c:forEach var="baiViet" items="${requestScope.baiViets}">
-                <a href="/chi-tiet-bai-viet?idBaiViet=${baiViet.idBaiViet}">
+                <a href="chi-tiet-bai-viet?idBaiViet=${baiViet.idBaiViet}">
                     <div class="relational-news row">
                         <div class="relational-new-img col-4">
-                            <img src="${baiViet.hinh}" alt="">
+                            <img src="${baiViet.hinh}" alt="" style="width: 100%;">
                         </div>
                         <div class="relational-news-title col-8">
-                            <p>${baiViet.tenBaiViet}</p>
+                            <small>${baiViet.tenBaiViet}</small>
                         </div>
                     </div>
                 </a>
+                <hr/>
             </c:forEach>
         </div>
         <div class="col-md-9 content">
-            <h6>Chuyên mục <a href="/tin-tuc?loaiBaiViet=${requestScope.baiViet.idLoaiBaiViet}">${requestScope.baiViet.loaiBaiViet}</a>
+            <h6>Chuyên mục <a href="tin-tuc?loaiBaiViet=${requestScope.baiViet.idLoaiBaiViet}">${requestScope.baiViet.loaiBaiViet}</a>
             </h6>
             <h1 id="news-title">${requestScope.baiViet.tenBaiViet}</h1>
             <p id="news-info">
@@ -122,49 +123,49 @@
             <div class="news-content">
                 ${requestScope.baiViet.noiDung}
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12">
-            <div class="danhgia">
-                <form action="/binh-luan-bai-viet" method="post">
-                    <input type="hidden" name="txtIdBaiViet" value="${requestScope.baiViet.idBaiViet}">
-                    <textarea class="form-control" rows="3" id="comment"
-                              placeholder="Nhập góp ý của quý khách" name="comment"></textarea>
-                    <br>
-                    <button class="btn btn-success margin-top-8px" style="float:right" id="binh-luan-mon-an">
-                        Góp ý
-                    </button>
-                    <script>
+            <div class="row" style="padding-top: 64px;">
+                <div class="col-12">
+                    <div class="danhgia">
+                        <form action="binh-luan-bai-viet" method="post">
+                            <input type="hidden" name="txtIdBaiViet" value="${requestScope.baiViet.idBaiViet}">
+                            <textarea class="form-control" rows="3" id="comment"
+                                    placeholder="Nhập góp ý của quý khách" name="comment"></textarea>
+                            <br>
+                            <button class="btn btn-success margin-top-8px" style="float:right" id="binh-luan-mon-an">
+                                Góp ý
+                            </button>
+                            <script>
 
-                    </script>
-                </form>
-            </div>
-
-            <div class="clearfix"></div>
-
-            <div id="user-comments">
-                <c:forEach var="binhLuan" items="${requestScope.binhLuans}">
-                    <div class="comment" style="margin-top: 16px">
-                        <div class="user-avatar" style="float: left; width: 64px">
-                            <img src="${binhLuan.avatar}" alt="user-avatar" width="50" height="50"
-                                 style="border-radius:50%" style="border-radius:50%">
-                        </div>
-
-                        <div class="user-comment" style="float: right; width: calc(100% - 64px); border-bottom: 1px dashed #DDD;">
-                            <div class="user-name" >
-                                <p class="no-margin">
-                                    <b>${binhLuan.email}</b>
-                                </p>
-                                <p class="date-comment" class="small-text" style="color: #858585;margin-top: 2px;font-size: 12px">${binhLuan.thoiGian}</p>
-                            </div>
-                            <p class="comment-text" class="lighten-text">
-                                    ${binhLuan.noiDung}
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
+                            </script>
+                        </form>
                     </div>
-                </c:forEach>
+
+                    <div class="clearfix"></div>
+
+                    <div id="user-comments">
+                        <c:forEach var="binhLuan" items="${requestScope.binhLuans}">
+                            <div class="comment" style="margin-top: 16px">
+                                <div class="user-avatar" style="float: left; width: 64px">
+                                    <img src="${binhLuan.avatar}" alt="user-avatar" width="50" height="50"
+                                            style="border-radius:50%">
+                                </div>
+
+                                <div class="user-comment" style="float: right; width: calc(100% - 64px); border-bottom: 1px dashed #DDD;">
+                                    <div class="user-name" >
+                                        <p class="no-margin">
+                                            <b>${binhLuan.email}</b>
+                                        </p>
+                                        <p class="date-comment" class="small-text" style="color: #858585;margin-top: 2px;font-size: 12px">${binhLuan.thoiGian}</p>
+                                    </div>
+                                    <p class="comment-text" class="lighten-text">
+                                            ${binhLuan.noiDung}
+                                    </p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </c:forEach>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

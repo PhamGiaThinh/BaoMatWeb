@@ -10,7 +10,7 @@
         <p class="card-description">
             Vui lòng nhập đầy đủ thông tin yêu cầu
         </p>
-        <form class="forms-sample" action="/admin/sua-nguoi-dung" method="post">
+        <form class="forms-sample" action="admin-sua-nguoi-dung" method="post">
             <div class="form-row">
                 <div class="col-12 col-sm-6">
                     <div class="form-group">
@@ -131,7 +131,7 @@
             <div class="form-row justify-content-center">
                 <input readonly type="submit" class="btn btn-primary btn-rounded" id="btn-submit"
                         value="Sửa người dùng" />
-                <a href="/admin/nguoi-dung" class="btn btn-success btn-rounded"
+                <a href="admin-nguoi-dung" class="btn btn-success btn-rounded"
                         style="margin-left: 16px;">Về trang chủ</a>
             </div>
         </form>

@@ -93,9 +93,6 @@
                         </td>
                         <td>${lienHe.thoiGian}</td>
                         <td>${lienHe.trangThaiSeen}</td>
-                        <%--<td>--%>
-                            <%--<a href="/admin/xem-hoa-don?idHoaDon=${hoaDon.idHoaDon}">Xem chi tiết</a>--%>
-                        <%--</td>--%>
                     </tr>
                 </c:forEach>
                 </tbody>

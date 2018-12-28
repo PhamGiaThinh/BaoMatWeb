@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-@WebServlet(name = "HoaDonServlet" ,urlPatterns = {"/admin/hoa-don"})
+@WebServlet(name = "HoaDonServlet" ,urlPatterns = {"/admin-hoa-don"})
 public class HoaDonServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -26,9 +26,7 @@ public class HoaDonServlet extends HttpServlet {
         request.setAttribute("hoaDons",hoaDons);
         RequestDispatcher dispatcher=getServletContext().getRequestDispatcher("/admin-quan-ly-hoa-don.jsp");
         dispatcher.forward(request,response);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "SuaNghiepVuServlet", urlPatterns = {"/admin/sua-nghiep-vu"})
+@WebServlet(name = "SuaNghiepVuServlet", urlPatterns = {"/admin-sua-nghiep-vu"})
 public class SuaNghiepVuServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
@@ -28,7 +28,7 @@ public class SuaNghiepVuServlet extends HttpServlet {
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-        response.sendRedirect("/admin/nghiep-vu");
+        response.sendRedirect("admin-nghiep-vu");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -86,7 +86,7 @@
             </tbody>
         </table>
         <div class="row justify-content-center mt-3 mb-4">
-            <a href="/admin/hoa-don" class="btn btn-primary btn-rounded">Về trang quản lý hóa đơn</a>
+            <a href="admin-hoa-don" class="btn btn-primary btn-rounded">Về trang quản lý hóa đơn</a>
         </div>
     </div>
 </div>

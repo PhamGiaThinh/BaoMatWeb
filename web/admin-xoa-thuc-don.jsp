@@ -47,11 +47,11 @@
             </div>
         </div>
 
-        <form action="/admin/xoa-thuc-don" method="post">
+        <form action="admin-xoa-thuc-don" method="post">
             <input type="hidden" value="${requestScope.thucDon.idThucDon}" name="txtIdThucDon">
             <div class="form-row justify-content-center">
                 <input type="submit" value="Xóa" class="btn btn-primary btn-rounded"> &nbsp;
-                <a href="/admin/thuc-don" class="btn btn-success btn-rounded">Hủy bỏ</a>
+                <a href="admin-thuc-don" class="btn btn-success btn-rounded">Hủy bỏ</a>
             </div>
         </form>
     </div>
@@ -73,18 +73,6 @@
     }
 
     $("#ten").blur(() => validateForTen());
-
-    // function validateForMota() {
-    //     let mota = $("#mota").val().trim();
-    //     if (mota === "") {
-    //         $("#validate-mota").html("Bạn chưa nhập mô tả");
-    //         return false;
-    //     }
-    //     $("#validate-mota").html("");
-    //     return true;
-    // }
-    //
-    // $("#mota").blur(() => validateForMota());
 
     function validateForGia() {
         let gia = $("#gia")
@@ -125,22 +113,6 @@
     }
 
     $("#phan-tram-khuyen-mai").blur(() => validateForPhanTramKhuyenMai());
-
-    // function validateForThu() {
-    //     let thu = $("#thu").val().trim();
-    //     if (thu === "") {
-    //         $("#validate-thu").html("Bạn chưa nhập thứ");
-    //         return false;
-    //     }
-    //     if (parseInt(thu) < 2 || parseInt(thu) > 8) {
-    //         $("#validate-thu").html("Thứ không hợp lệ.");
-    //         return false;
-    //     }
-    //     $("#validate-thu").html("");
-    //     return true;
-    // }
-
-    // $("#thu").blur(() => validateForThu());
 
     $("#btn-submit").click(() => {
         let res =

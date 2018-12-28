@@ -9,7 +9,7 @@
         <p class="card-description">
             Vui lòng nhập đầy đủ thông tin yêu cầu
         </p>
-        <form action="/admin/them-quyen" method="post">
+        <form action="admin-them-quyen" method="post">
             <div class="form-row">
                 <label for="ten">Tên quyền</label>
                 <input type="text" class="form-control" id="ten" placeholder="Tên quyền" name="txtTenQuyen">
@@ -27,7 +27,7 @@
             </div>
             <div class="form-row justify-content-center">
                 <input type="submit" value="Thêm" class="btn btn-primary btn-rounded">
-                <a href="/admin/quyen" class="btn btn-success btn-rounded">Hủy bỏ</a>
+                <a href="admin-quyen" class="btn btn-success btn-rounded">Hủy bỏ</a>
             </div>
         </form>
     </div>

@@ -9,7 +9,7 @@
         <h2 class="card-title">Quản lý bài viết</h2>
         <div class="row">
             <div class="col-sm-12 col-md-6">
-                <a href="admin/viet-bai" class="btn btn-primary btn-rounded">Viết bài</a>
+                <a href="admin-viet-bai" class="btn btn-primary btn-rounded">Viết bài</a>
             </div>
             <div class="col-sm-12 col-md-6">
                 <input type="search" class="form-control" placeholder="Tìm kiếm bài viết"
@@ -32,10 +32,10 @@
                     </td>
                     <td>${baiViet.ngayViet}</td>
                     <td>
-                        <a href="admin/xem-bai-viet?id=${baiViet.idBaiViet}">Xem</a> |
-                        <a href="admin/sua-bai-viet?id=${baiViet.idBaiViet}">Sửa</a> |
-                        <a href="admin/xoa-bai-viet?id=${baiViet.idBaiViet}">Xóa</a> |
-                        <a href="admin/binh-luan-bai-viet?idBaiViet=${baiViet.idBaiViet}">Bình luận</a>
+                        <a href="admin-xem-bai-viet?id=${baiViet.idBaiViet}">Xem</a> |
+                        <a href="admin-sua-bai-viet?id=${baiViet.idBaiViet}">Sửa</a> |
+                        <a href="admin-xoa-bai-viet?id=${baiViet.idBaiViet}">Xóa</a> |
+                        <a href="admin-binh-luan-bai-viet?idBaiViet=${baiViet.idBaiViet}">Bình luận</a>
                     </td>
                 </tr>
             </c:forEach>

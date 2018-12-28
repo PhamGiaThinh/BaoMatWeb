@@ -39,11 +39,11 @@
                     <tr>
                         <td>Thứ:</td>
                         <c:choose>
-                            <c:when test="${thucDon.thu == '8'}">
+                            <c:when test="${requestScope.thucDon.thu == '8'}">
                                 <td>Chủ nhật</td>
                             </c:when>
                             <c:otherwise>
-                                <td>${thucDon.thu}</td>
+                                <td>${requestScope.thucDon.thu}</td>
                             </c:otherwise>
                         </c:choose>
                     </tr>
@@ -56,8 +56,8 @@
             <form method="post" action="XacNhanXemThucDon">
                 <input type="hidden" value="1" name="idloaimon"/>
                 <a class="btn btn-primary btn-rounded"
-                   href="/admin/sua-thuc-don?idThucDon=${requestScope.thucDon.idThucDon}">Sửa thực đơn</a> &nbsp;
-                <a href="/admin/thuc-don" class="btn btn-success btn-rounded">Về trang quản lý thực đơn</a>
+                   href="admin-sua-thuc-don?idThucDon=${requestScope.thucDon.idThucDon}">Sửa thực đơn</a> &nbsp;
+                <a href="admin-thuc-don" class="btn btn-success btn-rounded">Về trang quản lý thực đơn</a>
             </form>
         </div>
     </div>

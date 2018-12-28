@@ -8,7 +8,7 @@
     <div class="card-body">
         <h2 class="card-title">Sửa quyền : ${quyen.tenQuyen}</h2>
         <p class="card-description">Vui lòng cung cấp đủ các thông tin sau</p>
-        <form action="/admin/sua-quyen" method="post">
+        <form action="admin-sua-quyen" method="post">
             <input type="hidden" value="${quyen.idQuyen}" name="txtIdQuyen">
             <div class="form-row">
                 <label for="ten">Tên quyền</label>
@@ -27,7 +27,7 @@
             </div>
             <div class="form-row justify-content-center">
                 <input type="submit" value="Lưu lại" class="btn btn-primary btn-rounded">
-                <a href="/admin/quyen" class="btn btn-success btn-rounded">Hủy bỏ</a>
+                <a href="admin-quyen" class="btn btn-success btn-rounded">Hủy bỏ</a>
             </div>
         </form>
     </div>

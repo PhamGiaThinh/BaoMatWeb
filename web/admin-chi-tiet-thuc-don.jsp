@@ -36,7 +36,7 @@
                         <td>${monAn.gia}đ</td>
                         <td>${monAn.khuyenMai}%</td>
                         <td>${monAn.ngayThem}</td>
-                        <td><a href="/admin/xoa-mon-an-khoi-thuc-don?idThucDon=${requestScope.idThucDon}&idMonAn=${monAn.idMonAn}">Xóa</a></td>
+                        <td><a href="admin-xoa-mon-an-khoi-thuc-don?idThucDon=${requestScope.idThucDon}&idMonAn=${monAn.idMonAn}">Xóa</a></td>
                     </tr>
                 </c:forEach>
                 </tbody>
@@ -44,7 +44,7 @@
         </div>
     </div>
     <div class="row justify-content-center mt-3 mb-4">
-        <a href="/admin/thuc-don" class="btn btn-success btn-rounded">Về trang quản lý thực đơn</a>
+        <a href="admin-thuc-don" class="btn btn-success btn-rounded">Về trang quản lý thực đơn</a>
     </div>
 </div>
 

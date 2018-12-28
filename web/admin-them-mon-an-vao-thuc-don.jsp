@@ -5,7 +5,7 @@
 <jsp:include page="_shared/admin/page-header.jsp" flush="true"/>
 
 <div class="card pl-2 pr-2" style="margin: 16px 0;">
-    <form class="forms-sample" action="/admin/them-mon-an-vao-thuc-don" method="post">
+    <form class="forms-sample" action="admin-them-mon-an-vao-thuc-don" method="post">
         <div class="card-body">
             <h2>Thêm món ăn vào thực đơn: ${requestScope.thucDon.tenThucDon}</h2>
         </div>
@@ -23,7 +23,7 @@
         <div class="row justify-content-center mt-3 mb-4">
             <input type="submit" class="btn btn-primary btn-rounded" id="btn-submit"
                    value="Thêm"/> &nbsp;
-            <a href="/admin/thuc-don" class="btn btn-success btn-rounded">Về trang quản lý thực đơn</a>
+            <a href="admin-thuc-don" class="btn btn-success btn-rounded">Về trang quản lý thực đơn</a>
         </div>
     </form>
 </div>

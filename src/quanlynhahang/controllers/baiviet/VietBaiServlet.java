@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Calendar;
 
-@WebServlet(name = "VietBaiServlet", urlPatterns = {"/admin/viet-bai"})
+@WebServlet(name = "VietBaiServlet", urlPatterns = {"/admin-viet-bai"})
 public class VietBaiServlet extends HttpServlet implements ActionPermissionID {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
@@ -49,7 +49,7 @@ public class VietBaiServlet extends HttpServlet implements ActionPermissionID {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        response.sendRedirect("/admin/bai-viet");
+        response.sendRedirect("admin-bai-viet");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

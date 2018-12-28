@@ -12,39 +12,38 @@
             <table class="table">
                 <tr>
                     <td>Thời gian</td>
-                    <td>${datBan.thoiGian}</td>
+                    <td>${requestScope.datBan.thoiGian}</td>
                 </tr>
                 <tr>
                     <td>Thời gian</td>
-                    <td>${datBan.ngay}</td>
+                    <td>${requestScope.datBan.ngay}</td>
                 </tr>
                 <tr>
                     <td>Số lượng người</td>
-                    <td>${datBan.soLuong}</td>
+                    <td>${requestScope.datBan.soLuong}</td>
                 </tr>
                 <tr>
                     <td>Ghi chú</td>
-                    <td>${datBan.ghiChu}</td>
+                    <td>${requestScope.datBan.ghiChu}</td>
                 </tr>
                 <tr>
                     <td>Thời gian</td>
-                    <td>${datBan.hoTen}</td>
+                    <td>${requestScope.datBan.hoTen}</td>
                 </tr>
                 <tr>
                     <td>Thời gian</td>
-                    <td>${datBan.soDT}</td>
+                    <td>${requestScope.datBan.soDT}</td>
                 </tr>
             </table>
-            <form action="/admin/xoa-dat-ban" method="post">
+            <form action="admin-xoa-dat-ban" method="post">
                 <input type="hidden" value="${datBan.email}" name="txtEmail">
                 <div class="form-row justify-content-center">
                     <input type="submit" value="Xóa" class="btn btn-primary btn-rounded">
-                    <a href="/admin/dat-ban" class="btn btn-success btn-rounded">Hủy bỏ</a>
+                    <a href="admin-dat-ban" class="btn btn-success btn-rounded">Hủy bỏ</a>
                 </div>
             </form>
         </div>
     </div>
 </div>
     <jsp:include page="_shared/admin/page-footer.jsp" flush="true"/>
-    <script></script>
 <jsp:include page="_shared/admin/end-of-file.jsp" flush="true"/>

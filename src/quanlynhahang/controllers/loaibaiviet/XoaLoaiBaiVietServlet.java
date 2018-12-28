@@ -15,21 +15,21 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "XoaLoaiBaiVietServlet" , urlPatterns = "/admin/xoa-loai-bai-viet")
+@WebServlet(name = "XoaLoaiBaiVietServlet" , urlPatterns = "/admin-xoa-loai-bai-viet")
 public class XoaLoaiBaiVietServlet extends HttpServlet implements ActionPermissionID {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=UTF-8");
         try {
-//            if (!AuthorizePermission.checkLogined(request)) {
-//                response.sendError(404);
-//                return;
-//            }
-//
-//            if (!AuthorizePermission.checkPermissionAllowed(request, getPermissionId())) {
-//                response.sendError(401);
-//                return;
-//            }
+            if (!AuthorizePermission.islogined(request)) {
+                response.sendError(404);
+                return;
+            }
+
+            if (!AuthorizePermission.checkPermissionAllowed(request, getPermissionId())) {
+                response.sendError(401);
+                return;
+            }
 
             String idLoaiBaiViet = request.getParameter("txtIdLoai");
             if (idLoaiBaiViet == null || idLoaiBaiViet.trim().equals("")) {
@@ -39,7 +39,7 @@ public class XoaLoaiBaiVietServlet extends HttpServlet implements ActionPermissi
 
             LoaiBaiVietService service = new LoaiBaiVietService(DbAccess.getValue(request));
             service.delete(Integer.parseInt(idLoaiBaiViet));
-            response.sendRedirect("/admin/loai-bai-viet");
+            response.sendRedirect("admin-loai-bai-viet");
 
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -48,15 +48,15 @@ public class XoaLoaiBaiVietServlet extends HttpServlet implements ActionPermissi
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-//            if (!AuthorizePermission.checkLogined(request)) {
-//                response.sendError(404);
-//                return;
-//            }
-//
-//            if (!AuthorizePermission.checkPermissionAllowed(request, getPermissionId())) {
-//                response.sendError(401);
-//                return;
-//            }
+            if (!AuthorizePermission.islogined(request)) {
+                response.sendError(404);
+                return;
+            }
+
+            if (!AuthorizePermission.checkPermissionAllowed(request, getPermissionId())) {
+                response.sendError(401);
+                return;
+            }
             String idLoaiBaiViet = request.getParameter("idLoaiBaiViet");
             if (idLoaiBaiViet == null || idLoaiBaiViet.trim().equals("")) {
                 response.setStatus(400);

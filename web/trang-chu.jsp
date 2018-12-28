@@ -27,7 +27,7 @@
                     mừng ${sessionScope.nguoiDungHienTai.hoDem} ${sessionScope.nguoiDungHienTai.ten} đến với website</a>
                 <a href="dang-xuat">Đăng xuất</a>
                 <c:if test="${sessionScope.nguoiDungHienTai.quanTriVien}">
-                    <a href="admin/ket-noi-database">Quản trị</a>
+                    <a href="admin-ket-noi-database">Quản trị</a>
                 </c:if>
                 <a href="gio-hang">Giỏ hàng</a>
             </c:when>

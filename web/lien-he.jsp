@@ -56,7 +56,7 @@
                     Góp ý cho chúng tôi
                 </h3>
 
-                <form class="wrap-form-reservation size22 m-l-r-auto" action="/lien-he" method="post">
+                <form class="wrap-form-reservation size22 m-l-r-auto" action="lien-he" method="post">
                     <div class="row">
                         <div class="col-md-4">
                             <!-- Name -->
@@ -117,7 +117,7 @@
             <div class="container-fluid">
                 <div class="footer-title">
                     <h1 class="font-blonde-script">Liên hệ</h1>
-                    <img src="assests/images/logo.png" height="100" width="100" />
+                    <img src="assests/images/logo.png" height="100" width="100" alt="" />
                     <p>
                         <i>Lorem Ipsum is simply dummy text of the printing and typesetting industry</i>
                     </p>

@@ -12,7 +12,7 @@
         </p>
         <div class="row" style="margin-bottom: 16px;">
             <div class="col-3" style="text-align: right; padding-right: 16px;">
-                <img src="assests/images/faces/face1.jpg" style="border-radius: 50%;"/>
+                <img src="assests/images/faces/face1.jpg" alt="" style="border-radius: 50%;"/>
             </div>
             <div class="col-9">
                 <table class="table">
@@ -40,10 +40,10 @@
             </div>
         </div>
         <div class="form-row justify-content-center">
-            <form method="post" action="/admin/xoa-quan-tri-vien">
+            <form method="post" action="admin-xoa-quan-tri-vien">
                 <input type="hidden" value="${requestScope.qtv.email}" name="txtEmail" />
                 <input type="submit" class="btn btn-primary btn-rounded" value="Xóa"/>
-                <a style="margin-left: 16px;" href="/admin/quan-tri-vien" class="btn btn-success btn-rounded">Huỷ bỏ</a>
+                <a style="margin-left: 16px;" href="admin-quan-tri-vien" class="btn btn-success btn-rounded">Huỷ bỏ</a>
             </form>
         </div>
     </div>

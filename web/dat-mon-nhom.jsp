@@ -57,7 +57,7 @@
                                             style="width: 100%;">Giỏ hàng tạo bởi ${requestScope.hoaDon.tenNguoiTao}
                                     </div>
                                     <div class="input-group form-group" style="margin-top: 8px;">
-                                        <input id="txt-link" type="text" class="form-control" id="txt-link"
+                                        <input type="text" class="form-control" id="txt-link"
                                                 value="${requestScope["javax.servlet.forward.request_uri"]}?id=${requestScope.hoaDon.idHoaDonNhom}">
                                         <div class="input-group-append">
                                             <input class="btn btn-info" type="button" value="Copy link"

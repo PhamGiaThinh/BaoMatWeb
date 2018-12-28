@@ -42,18 +42,14 @@
                     <td>Loại Món Ăn:</td>
                     <td>${requestScope.loaiMon.tenLoaiMon}</td>
                 </tr>
-                <%--<tr>--%>
-                    <%--<td>Thực Đơn:</td>--%>
-                    <%--<td>${requestScope.thucDon.tenThucDon}</td>--%>
-                <%--</tr>--%>
             </table>
         </div>
     </div>
-    <form action="/admin/xoa-mon-an" method="post" class="mt-4 mb-4">
+    <form action="admin-xoa-mon-an" method="post" class="mt-4 mb-4">
         <input type="hidden" value="${requestScope.monAn.idMonAn}" name="txtIdMonAn">
         <div class="form-row justify-content-center">
             <input type="submit" value="Xóa" class="btn btn-primary btn-rounded"> &nbsp;
-            <a href="/admin/mon-an" class="btn btn-success btn-rounded">Hủy bỏ</a>
+            <a href="admin-mon-an" class="btn btn-success btn-rounded">Hủy bỏ</a>
         </div>
     </form>
 </div>

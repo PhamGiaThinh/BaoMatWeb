@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "KetNoiDbServlet", urlPatterns = { "/admin/ket-noi-database" })
+@WebServlet(name = "KetNoiDbServlet", urlPatterns = { "/admin-ket-noi-database" })
 public class KetNoiDbServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
@@ -34,7 +34,7 @@ public class KetNoiDbServlet extends HttpServlet {
 
             ConnectDbService login = new ConnectDbService(admin);
             if (login.tryConnectToServer()) {
-                response.sendRedirect("/admin");
+                response.sendRedirect("admin");
                 return;
             }
             request.setAttribute("server", server);

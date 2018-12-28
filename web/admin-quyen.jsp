@@ -9,7 +9,7 @@
         <h2 class="card-title">Quản lý quyền</h2>
         <div class="row">
             <div class="col-sm-12 col-md-6">
-                <a href="/admin/them-quyen" class="btn btn-primary btn-rounded">Thêm quyền</a>
+                <a href="admin-them-quyen" class="btn btn-primary btn-rounded">Thêm quyền</a>
             </div>
             <div class="col-sm-12 col-md-6">
                 <input type="search" class="form-control" placeholder="Search"
@@ -34,9 +34,9 @@
                 <td>${quyen.moTa}</td>
                 <td>${quyen.idNghiepVu}</td>
                 <td>
-                    <a href="/admin/xem-quyen?idQuyen=${quyen.idQuyen}">Xem</a> |
-                    <a href="/admin/sua-quyen?idQuyen=${quyen.idQuyen}">Sửa</a> |
-                    <a href="/admin/xoa-quyen?idQuyen=${quyen.idQuyen}">Xóa</a>
+                    <a href="admin-xem-quyen?idQuyen=${quyen.idQuyen}">Xem</a> |
+                    <a href="admin-sua-quyen?idQuyen=${quyen.idQuyen}">Sửa</a> |
+                    <a href="admin-xoa-quyen?idQuyen=${quyen.idQuyen}">Xóa</a>
                 </td>
             </tr>
             </c:forEach>

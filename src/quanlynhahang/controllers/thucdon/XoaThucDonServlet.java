@@ -16,7 +16,7 @@ import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "XoaThucDonServlet", urlPatterns = {"/admin/xoa-thuc-don"})
+@WebServlet(name = "XoaThucDonServlet", urlPatterns = {"/admin-xoa-thuc-don"})
 public class XoaThucDonServlet extends HttpServlet implements ActionPermissionID {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
@@ -40,18 +40,7 @@ public class XoaThucDonServlet extends HttpServlet implements ActionPermissionID
             ThucDonService thucDonService = new ThucDonService(DbAccess.getValue(request));
             thucDonService.delete(Integer.parseInt(idThucDon));
 
-//            ThucDonService thucDonService1 = new ThucDonService(DbAccess.getValue(request));
-//
-//            ThucDon thucDon = thucDonService1.getThucDon(idThucDon);
-//            File file = new File(thucDon.getHinhThucDon());
-//            if(file.delete()){
-//                response.sendRedirect("/admin/thuc-don");
-//            }
-//            else{
-//                response.setStatus(400);
-//                return;
-//            }
-            response.sendRedirect("/admin/thuc-don");
+            response.sendRedirect("admin-thuc-don");
 
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();

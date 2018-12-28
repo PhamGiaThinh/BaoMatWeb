@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-@WebServlet(name = "ThucDonServlet", urlPatterns = {"/admin/thuc-don"})
+@WebServlet(name = "ThucDonServlet", urlPatterns = {"/admin-thuc-don"})
 public class ThucDonServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {

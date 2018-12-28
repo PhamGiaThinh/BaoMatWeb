@@ -17,7 +17,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "ThongKeDichVuServlet", urlPatterns = {"/admin/thong-ke-dich-vu"})
+@WebServlet(name = "ThongKeDichVuServlet", urlPatterns = {"/admin-thong-ke-dich-vu"})
 public class ThongKeDichVuServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

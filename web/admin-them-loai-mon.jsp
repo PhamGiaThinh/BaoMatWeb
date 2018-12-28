@@ -11,7 +11,7 @@
         <p class="card-description">
             Vui lòng nhập đầy đủ thông tin yêu cầu
         </p>
-        <form class="forms-sample" action="/admin/them-loai-mon" method="post">
+        <form class="forms-sample" action="admin-them-loai-mon" method="post">
             <div class="form-row">
                 <div class="col-sm-12 form-group">
                     <label for="ten">Tên loại món (bắt buộc)</label>
@@ -25,7 +25,7 @@
             <div class="form-row">
                 <input type="submit" class="btn btn-primary btn-rounded mr-2" id="btn-submit"
                        value="Thêm loại món"/>
-                <a href="/admin/loai-mon" class="btn btn-primary btn-rounded">Hủy bỏ</a>
+                <a href="admin-loai-mon" class="btn btn-primary btn-rounded">Hủy bỏ</a>
             </div>
 
         </form>

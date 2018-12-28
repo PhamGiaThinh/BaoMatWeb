@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "XoaQuyenServlet" , urlPatterns = {"/admin/xoa-quyen"})
+@WebServlet(name = "XoaQuyenServlet" , urlPatterns = {"/admin-xoa-quyen"})
 public class XoaQuyenServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
@@ -31,7 +31,7 @@ public class XoaQuyenServlet extends HttpServlet {
 
             e.printStackTrace();
         }
-        response.sendRedirect("/admin/quyen");
+        response.sendRedirect("admin-quyen");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

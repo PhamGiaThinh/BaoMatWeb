@@ -3,16 +3,16 @@
 <jsp:include page="_shared/admin/top-of-page.jsp" flush="true"/>
 <title>Viết bài</title>
 <jsp:include page="_shared/admin/page-header.jsp" flush="true"/>
-<script src="<%= request.getContextPath() + "/" %>../../assests/js/ckeditor/ckeditor.js"
+<script src="assests/js/ckeditor/ckeditor.js"
         type="text/javascript"></script>
-<script src="<%= request.getContextPath() + "/" %>../../assests/js/ckfinder/ckfinder.js"
+<script src="assests/js/ckfinder/ckfinder.js"
         type="text/javascript"></script>
 
 <div class="card">
     <div class="card-body">
         <h3 class="card-title">Thêm bài viết mới</h3>
         <p class="card-description">Vui lòng nhập đầy đủ thông tin yêu cầu</p>
-        <form action="/admin/viet-bai" method="post">
+        <form action="admin-viet-bai" method="post">
             <div class="form-group">
                 <label for="ten-bai-viet">Tên bài viết (bắt buộc)</label>
                 <input type="text" placeholder="Tên bài viết" name="txtTenBaiViet" class="form-control"
@@ -56,7 +56,7 @@
             <div class="form-row justify-content-center">
                 <input type="submit" value="Thêm bài viết" class="btn btn-primary btn-rounded"
                         id="btn-submit"/>
-                <a href="admin-bai-viet.html" class="btn btn-success btn-rounded"
+                <a href="admin-bai-viet" class="btn btn-success btn-rounded"
                         style="margin-left: 16px;">Về trang chủ</a>
             </div>
         </form>

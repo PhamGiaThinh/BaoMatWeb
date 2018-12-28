@@ -13,7 +13,7 @@
         <div class="row" style="margin-bottom: 16px;">
             <div class="col-3" style="text-align: right; padding-right: 16px;">
                 <c:if test="${requestScope.nguoiDung.avatar.toString().equals(\"\")}">
-                    <img src="" style="border-radius: 50%;"/>
+                    <img alt="" src="" style="border-radius: 50%;"/>
                 </c:if>
             </div>
             <div class="col-9">
@@ -42,7 +42,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <a href="/admin/nguoi-dung" class="btn btn-success btn-rounded"
+            <a href="admin-nguoi-dung" class="btn btn-success btn-rounded"
                     style="margin-left: 16px;">Về trang chủ</a>
         </div>
     </div>

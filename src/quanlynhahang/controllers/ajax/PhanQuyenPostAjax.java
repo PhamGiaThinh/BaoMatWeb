@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "PhanQuyenPostAjax", urlPatterns = { "/admin/ajax-cap-nhap-phan-quyen" })
+@WebServlet(name = "PhanQuyenPostAjax", urlPatterns = { "/admin-ajax-cap-nhap-phan-quyen" })
 public class PhanQuyenPostAjax extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         boolean isset = false;

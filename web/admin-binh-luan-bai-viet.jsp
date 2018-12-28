@@ -31,7 +31,7 @@
             </table>
         </div>
         <div class="row justify-content-center mt-3 mb-4">
-            <a href="/admin/bai-viet" class="btn btn-primary btn-rounded">Hủy</a>
+            <a href="admin-bai-viet" class="btn btn-primary btn-rounded">Hủy</a>
         </div>
     </div>
 </div>
@@ -48,7 +48,7 @@
                 return decodeURI(results[1]) || 0;
             };
             let idBaiViet = $.urlParam("idBaiViet");
-            $.post("/xoa-binh-luan", { idBinhLuan: idBinhLuan }, () => location.href = "/admin/binh-luan-bai-viet?idBaiViet=" + idBaiViet);
+            $.post("xoa-binh-luan", { idBinhLuan: idBinhLuan }, () => location.href = "admin-binh-luan-bai-viet?idBaiViet=" + idBaiViet);
         }
     }
 </script>

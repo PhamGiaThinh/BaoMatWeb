@@ -26,7 +26,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-@WebServlet(name = "SuaBaiVietServlet", urlPatterns = { "/admin/sua-bai-viet" })
+@WebServlet(name = "SuaBaiVietServlet", urlPatterns = { "/admin-sua-bai-viet" })
 public class SuaBaiVietServlet extends HttpServlet implements ActionPermissionID {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         request.setCharacterEncoding("utf-8");
@@ -56,7 +56,7 @@ public class SuaBaiVietServlet extends HttpServlet implements ActionPermissionID
         } catch (Exception e) {
             e.printStackTrace();
         }
-        response.sendRedirect("/admin/bai-viet");
+        response.sendRedirect("admin-bai-viet");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

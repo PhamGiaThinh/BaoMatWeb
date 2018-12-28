@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-@WebServlet(name = "ThemMonAnVaoThucDonServlet", urlPatterns = {"/admin/them-mon-an-vao-thuc-don"})
+@WebServlet(name = "ThemMonAnVaoThucDonServlet", urlPatterns = {"/admin-them-mon-an-vao-thuc-don"})
 public class ThemMonAnVaoThucDonServlet extends HttpServlet implements ActionPermissionID {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String idThucDon = request.getParameter("txtIdThucDon");
@@ -34,7 +34,7 @@ public class ThemMonAnVaoThucDonServlet extends HttpServlet implements ActionPer
             }
         }
 
-        response.sendRedirect("/admin/thuc-don");
+        response.sendRedirect("admin-thuc-don");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
