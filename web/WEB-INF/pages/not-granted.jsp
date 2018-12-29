@@ -27,7 +27,7 @@
                 <div class="col-lg-7 mx-auto text-white">
                     <div class="row align-items-center d-flex flex-row">
                         <div class="col-lg-6 text-lg-right pr-lg-4">
-                            <h1 class="display-1 mb-0">NO</h1>
+                            <h1 class="display-1 mb-0">401</h1>
                         </div>
                         <div class="col-lg-6 error-page-divider text-lg-left pl-lg-4">
                             <div style="font-size: 45px;">KHÔNG ĐƯỢC PHÉP</div>
@@ -36,7 +36,7 @@
                     </div>
                     <div class="row mt-5">
                         <div class="col-12 text-center mt-xl-2">
-                            <a class="text-white font-weight-medium" href="/admin">VỀ TRANG CHỦ QUẢN TRỊ</a>
+                            <a class="text-white font-weight-medium" href="admin">VỀ TRANG CHỦ QUẢN TRỊ</a>
                         </div>
                     </div>
                 </div>

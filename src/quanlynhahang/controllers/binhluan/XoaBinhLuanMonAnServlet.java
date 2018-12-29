@@ -51,6 +51,6 @@ public class XoaBinhLuanMonAnServlet extends HttpServlet implements ActionPermis
 
     @Override
     public int getPermissionId() {
-        return 0;
+        return AuthorizePermission.XOA_BINH_LUAN_MON_AN;
     }
 }

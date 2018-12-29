@@ -30,9 +30,7 @@ public class ThongKeTongThuServlet extends HttpServlet {
 
             ArrayList<ThongKeTongThu> thongKeTongThus1 = thongKeService.thongKeTongThuTungThang();
             request.setAttribute("thongKeTongThuTungThang", thongKeTongThus1);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

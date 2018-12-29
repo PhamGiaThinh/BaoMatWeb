@@ -116,7 +116,7 @@
             </ul>
             <ul class="navbar-nav navbar-nav-right">
                 <li class="nav-item  nav-profile dropdown">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="trang-chu">
                         <i class="mdi mdi-home-circle"></i>
                     </a>
                 </li>
