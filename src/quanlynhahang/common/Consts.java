@@ -9,5 +9,5 @@ public class Consts {
     public static final String EMAIL = "email";
     public static final String MESSAGE = "message";
     public static final String SAVED_CODE = "savedCode";
-    public static final String DOCUMENT_PATH = "/assests/content/document/";
+    public static final String DOCUMENT_PATH = "assests/content/document/";
 }

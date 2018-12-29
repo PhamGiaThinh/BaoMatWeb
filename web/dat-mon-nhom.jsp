@@ -20,7 +20,7 @@
             <img src="assests/images/dat-mon-banner.jpg" alt="" style="width: 100%;"/>
         </div>
         <div class="intro-content col-md-6 col-12" style="padding: 0 16px 32px 16px;">
-            <div style="padding-bottom: 8px;" class="sub">ĐẶT MÓN ONLINE - <a href="/trang-chu">Chi nhánh chính</a>
+            <div style="padding-bottom: 8px;" class="sub">ĐẶT MÓN ONLINE - <a href="trang-chu">Chi nhánh chính</a>
             </div>
             <div style="padding-bottom: 8px;" class="main">Nhà hàng Thịnh Tráng Điền, chi nhánh Quận 9</div>
             <div style="padding-bottom: 8px;" class="sub">75/6, Trương Văn Hải, Quận 9</div>
@@ -42,7 +42,7 @@
                             </div>
                             <c:if test="${requestScope.isInGroup && requestScope.hoaDon.emailNguoiTao == sessionScope.nguoiDungHienTai.email}">
                                 <div class="col-5" id="xoa-don-hang" style="text-align: right;">
-                                    <form action="/xoa-gio-hang-nhom" method="post">
+                                    <form action="xoa-gio-hang-nhom" method="post">
                                         <input type="hidden" name="idGioHang" id="txt-id-gio-hang"
                                                 value="${requestScope.hoaDon.idHoaDonNhom}">
                                         <input type="submit" id="btn-xoa" value="Xóa" class="btn btn-danger btn-rounded">
@@ -66,7 +66,7 @@
                                     </div>
                                 </c:when>
                                 <c:otherwise>
-                                    <form action="/tao-hoa-don-nhom" method="get">
+                                    <form action="tao-hoa-don-nhom" method="get">
                                         <input type="submit" class="btn btn-success btn-rounded" value="Tạo giỏ hàng"
                                                 style="width: 100%;">
                                     </form>
@@ -214,7 +214,7 @@
                                 aria-labelledby="tab-tab-tat-ca-mon-an">
                             <c:forEach var="monAn" items="${requestScope.monAns}">
                                 <div class="food col-md-4 col-sm-6 col-12">
-                                    <a href="/chi-tiet-mon-an?id=${monAn.idMonAn}">
+                                    <a href="chi-tiet-mon-an?id=${monAn.idMonAn}">
                                         <img src="${monAn.hinhMonAn}" alt=""/>
                                     </a>
                                     <div class="row" style="padding-top: 8px;">
@@ -229,7 +229,7 @@
                                 aria-labelledby="tab-thuc-an-nhanh">
                             <c:forEach var="monAn" items="${requestScope.monAnNhanhs}">
                                 <div class="food col-md-4 col-sm-6 col-12">
-                                    <a href="/chi-tiet-mon-an?id=${monAn.idMonAn}">
+                                    <a href="chi-tiet-mon-an?id=${monAn.idMonAn}">
                                         <img src="assests/images/banh-xeo.jpg" alt=""/>
                                     </a>
                                     <div class="row" style="padding-top: 8px;">
@@ -243,7 +243,7 @@
                         <div class="tab-pane fade" id="do-uong" role="tabpanel" aria-labelledby="tab-do-uong">
                             <c:forEach var="monAn" items="${requestScope.doUongs}">
                                 <div class="food col-md-4 col-sm-6 col-12">
-                                    <a href="/chi-tiet-mon-an?id=${monAn.idMonAn}">
+                                    <a href="chi-tiet-mon-an?id=${monAn.idMonAn}">
                                         <img src="assests/images/banh-xeo.jpg" alt=""/>
                                     </a>
                                     <div class="row" style="padding-top: 8px;">
@@ -272,7 +272,7 @@
     }
 
     function capNhatGioHang() {
-        $.post("/cap-nhap-trang-thai-gio-hang", {
+        $.post("cap-nhap-trang-thai-gio-hang", {
             idGioHang: $("#gio-hang-nhom").data("id-gio-hang")
         }, content => $("#gio-hang-main-content").html(content));
     }
@@ -285,7 +285,7 @@
         let soLuong = parseInt($("#so-luong-" + idMonAn).html());
         if (soLuong > 1) {
             $("#so-luong-" + idMonAn).html(soLuong - 1);
-            $.post("/tru-bot-mon-an-nhom", {
+            $.post("tru-bot-mon-an-nhom", {
                 idHoaDon: idHoaDon,
                 idMonAn: idMonAn,
                 emailNguoiDat: emailNguoiDat,
@@ -301,7 +301,7 @@
         }
         let soLuong = parseInt($("#so-luong-" + idMonAn).html());
         $("#so-luong-" + idMonAn).html(soLuong + 1);
-        $.post("/cong-them-mon-an-nhom", {
+        $.post("cong-them-mon-an-nhom", {
             idHoaDon: idHoaDon,
             idMonAn: idMonAn,
             emailNguoiDat: emailNguoiDat,
@@ -316,7 +316,7 @@
         }
         if (confirm("Bạn có thực sự muốn xóa món ăn này không?")) {
             addLoader();
-            $.post("/xoa-mon-an-nhom", {
+            $.post("xoa-mon-an-nhom", {
                 idHoaDon: idHoaDon,
                 idMonAn: idMonAn,
                 emailNguoiDat: emailNguoiDat
@@ -327,7 +327,7 @@
     function thanhToanGioHang(idHoaDon) {
         clearInterval(timmer);
         $(".thong-tin-thanh-toan").append('<div class="flip-square-loader mx-auto"></div>');
-        $.post("/thanh-toan-gio-hang-nhom", {idHoaDon: idHoaDon}, content => {
+        $.post("thanh-toan-gio-hang-nhom", {idHoaDon: idHoaDon}, content => {
             $("#gio-hang").css("opacity", "0.5");
             $("#btn-thanh-toan").attr("disabled", "disabled");
             $("#btn-xoa").val("Thành công");
@@ -353,12 +353,12 @@
             addLoader();
             let idMonAn = $(e.target).data("id-mon-an");
             let idGioHang = $("#gio-hang-nhom").data("id-gio-hang");
-            $.post("/them-mon-an-vao-gio-hang", {
+            $.post("them-mon-an-vao-gio-hang", {
                 idMonAn: idMonAn,
                 idGioHang: idGioHang
             }, content => {
                 if (content === "redirect") {
-                    location.href = "/dang-nhap";
+                    location.href = "dang-nhap";
                 } else {
                     capNhatGioHang();
                 }

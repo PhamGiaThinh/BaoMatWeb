@@ -24,7 +24,7 @@ public class DoiMatKhauServlet extends HttpServlet {
             NguoiDungService service = new NguoiDungService(DbAccess.getValue(request));
             boolean res = service.doiMatKhau(AuthorizePermission.getCurrentLoginUser(request).getEmail(), oldPass, newPass);
             if (res) {
-                response.sendRedirect("/sua-thong-tin-ca-nhan");
+                response.sendRedirect("sua-thong-tin-ca-nhan");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -36,7 +36,7 @@ public class DoiMatKhauServlet extends HttpServlet {
         if (!AuthorizePermission.islogined(request)) {
             HttpSession session = request.getSession();
             session.setAttribute(Consts.PREVIOUS_PAGE, "/doi-mat-khau");
-            response.sendRedirect("/dang-nhap");
+            response.sendRedirect("dang-nhap");
             return;
         }
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/doi-mat-khau.jsp");

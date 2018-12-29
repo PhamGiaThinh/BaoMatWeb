@@ -21,7 +21,7 @@ public class DangXuatServlet extends HttpServlet {
         session.removeAttribute(Consts.USER_DB_CONNECT);
         session.removeAttribute(Consts.WEBSITE_LOGIN);
 
-        response.sendRedirect("/trang-chu");
+        response.sendRedirect("trang-chu");
     }
 }
 

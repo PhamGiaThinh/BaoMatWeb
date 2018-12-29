@@ -28,9 +28,9 @@
     <link rel="stylesheet" href="http://propeller.in/components/range-slider/css/range-slider.css">
     <%----%>
 
-    <link rel="stylesheet" href="./assests/css/style.tat-ca-mon-an.css">
-    <link rel="stylesheet" href="./assests//css/global.css">
-    <link rel="stylesheet" href="./assests/css/style.trang-chu.css">
+    <link rel="stylesheet" href="assests/css/style.tat-ca-mon-an.css">
+    <link rel="stylesheet" href="assests//css/global.css">
+    <link rel="stylesheet" href="assests/css/style.trang-chu.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 

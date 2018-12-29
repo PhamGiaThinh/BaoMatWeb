@@ -3,22 +3,15 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Đăng nhập</title>
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assests/node_modules/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assests/node_modules/flag-icon-css/css/flag-icon.min.css">
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assests/node_modules/perfect-scrollbar/css/perfect-scrollbar.css">
-    <!-- endinject -->
-    <!-- plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/assests/css/style.css">
-    <!-- endinject -->
-    <link rel="shortcut icon" href="<%=request.getContextPath()%>/assests/images/favicon.png" />
+    <link rel="stylesheet" href="assests/node_modules/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assests/node_modules/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="assests/node_modules/perfect-scrollbar/css/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assests/css/style.css">
+    <link rel="shortcut icon" href="assests/images/favicon.png" />
 </head>
 
 <body>
@@ -63,20 +56,15 @@
     </div>
     <!-- page-body-wrapper ends -->
 </div>
-<!-- container-scroller -->
-<!-- plugins:js -->
-<script src="<%=request.getContextPath()%>/assests/node_modules/jquery/dist/jquery.min.js"></script>
-<script src="<%=request.getContextPath()%>/assests/node_modules/popper.js/dist/umd/popper.min.js"></script>
-<script src="<%=request.getContextPath()%>/assests/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="<%=request.getContextPath()%>/assests/node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
-<!-- endinject -->
-<!-- inject:js -->
-<script src="<%=request.getContextPath()%>/assests/js/off-canvas.js"></script>
-<script src="<%=request.getContextPath()%>/assests/js/hoverable-collapse.js"></script>
-<script src="<%=request.getContextPath()%>/assests/js/misc.js"></script>
-<script src="<%=request.getContextPath()%>/assests/js/settings.js"></script>
-<script src="<%=request.getContextPath()%>/assests/js/todolist.js"></script>
-<!-- endinject -->
+<script src="assests/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="assests/node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="assests/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="assests/node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+<script src="assests/js/off-canvas.js"></script>
+<script src="assests/js/hoverable-collapse.js"></script>
+<script src="assests/js/misc.js"></script>
+<script src="assests/js/settings.js"></script>
+<script src="assests/js/todolist.js"></script>
 </body>
 
 </html>

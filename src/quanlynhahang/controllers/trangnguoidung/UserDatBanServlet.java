@@ -49,7 +49,7 @@ public class UserDatBanServlet extends HttpServlet implements ActionPermissionID
 
             DatBanService datBanService= new DatBanService(DbAccess.getValue(request));
             datBanService.add(datBan) ;
-            response.sendRedirect("/admin/dat-ban");
+            response.sendRedirect("admin/dat-ban");
         }
         catch (Exception e){
             e.printStackTrace();

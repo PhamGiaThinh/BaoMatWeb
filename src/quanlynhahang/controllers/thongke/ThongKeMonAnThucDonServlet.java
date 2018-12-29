@@ -2,8 +2,8 @@ package quanlynhahang.controllers.thongke;
 
 import quanlynhahang.common.DbAccess;
 import quanlynhahang.models.businessmodels.ThongKeService;
-import quanlynhahang.models.datamodels.ThongKeMonAn;
-import quanlynhahang.models.datamodels.ThongKeThucDon;
+import quanlynhahang.models.viewmodels.ThongKeMonAn;
+import quanlynhahang.models.viewmodels.ThongKeThucDon;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 @WebServlet(name = "ThongKeMonAnThucDonServlet", urlPatterns = {"/admin-mon-an-thuc-don"})

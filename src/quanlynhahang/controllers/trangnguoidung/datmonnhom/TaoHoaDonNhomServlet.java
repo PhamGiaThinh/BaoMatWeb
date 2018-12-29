@@ -25,8 +25,8 @@ public class TaoHoaDonNhomServlet extends HttpServlet {
 
             if (!AuthorizePermission.islogined(request)) {
                 HttpSession session = request.getSession();
-                session.setAttribute(Consts.PREVIOUS_PAGE, "/tao-hoa-don-nhom");
-                response.sendRedirect("/dang-nhap");
+                session.setAttribute(Consts.PREVIOUS_PAGE, "tao-hoa-don-nhom");
+                response.sendRedirect("dang-nhap");
                 return;
             }
 
@@ -40,7 +40,7 @@ public class TaoHoaDonNhomServlet extends HttpServlet {
             MonAnNhomService service = new MonAnNhomService(DbAccess.getValue(request));
             hoaDonNhom = service.taoHoaDon(hoaDonNhom);
 
-            response.sendRedirect("/dat-mon-nhom?id=" + hoaDonNhom.getIdHoaDonNhom());
+            response.sendRedirect("dat-mon-nhom?id=" + hoaDonNhom.getIdHoaDonNhom());
         } catch (Exception e) {
             e.printStackTrace();
             response.getWriter().print(e.toString());

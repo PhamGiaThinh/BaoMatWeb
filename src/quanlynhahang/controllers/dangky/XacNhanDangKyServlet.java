@@ -27,7 +27,7 @@ public class XacNhanDangKyServlet extends HttpServlet {
             HttpSession session = request.getSession();
             Object obj = session.getAttribute(Consts.SAVED_CODE);
             if (obj == null) {
-                response.sendRedirect("/dang-ky");
+                response.sendRedirect("dang-ky");
                 return;
             }
             String savedCode = (String) obj;
@@ -39,7 +39,7 @@ public class XacNhanDangKyServlet extends HttpServlet {
                 session.setAttribute(Consts.WEBSITE_LOGIN, user);
                 session.setAttribute(Consts.USER_DB_CONNECT, admin);
                 session.removeAttribute(Consts.SAVED_CODE);
-                response.sendRedirect("/trang-chu");
+                response.sendRedirect("trang-chu");
                 return;
             }
             request.setAttribute(Consts.MESSAGE, "Mã xác nhận không chính xác, vui lòng kiểm tra lại email!");

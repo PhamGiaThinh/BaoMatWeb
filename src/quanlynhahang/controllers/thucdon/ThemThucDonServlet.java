@@ -87,11 +87,8 @@ public class ThemThucDonServlet extends HttpServlet implements ActionPermissionI
                 out.write(bytes, 0, read);
                 out0.write(bytes, 0, read);
 
-                photo = "../assests/images/thucdon/" + fileName;
+                photo = "assests/images/thucdon/" + fileName;
             }
-
-//            // =========================================================
-
             thucDon.setHinhThucDon(photo);
 
             ThucDonService thucDonService = new ThucDonService(DbAccess.getValue(request));

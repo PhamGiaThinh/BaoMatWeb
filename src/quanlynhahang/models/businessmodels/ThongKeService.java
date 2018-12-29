@@ -1,9 +1,7 @@
 package quanlynhahang.models.businessmodels;
 
 import quanlynhahang.models.datamodels.*;
-import quanlynhahang.models.viewmodels.HoaDonReport;
-import quanlynhahang.models.viewmodels.MonAnVM;
-import quanlynhahang.models.viewmodels.UserDbConnect;
+import quanlynhahang.models.viewmodels.*;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

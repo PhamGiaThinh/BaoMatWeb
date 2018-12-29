@@ -1,4 +1,4 @@
-package quanlynhahang.models.datamodels;
+package quanlynhahang.models.viewmodels;
 
 import java.sql.Date;
 

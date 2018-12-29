@@ -50,42 +50,7 @@ public class UserSuaThongTinServlet extends HttpServlet {
             }
             nguoiDung.setDienThoai(request.getParameter("txtDienThoai"));
             nguoiDung.setDiaChi(request.getParameter("txtDiaChi"));
-
-            // Hình
-            Part filePart = request.getPart("filecover");
-
-            String photo = "";
-            String path = "E:\\JSP Servlet\\WebProjectV6\\web\\assests\\images\\nguoidung";
-            String path1 = "E:\\JSP Servlet\\WebProjectV6\\out\\artifacts\\WebProjectV6_war_exploded\\assests\\images\\nguoidung";
-            File file = new File(path);
-            File file1 = new File(path1);
-            file.mkdir();
-            file1.mkdir();
-            String fileName = getFileName(filePart);
-
-            OutputStream out;
-            OutputStream out0;
-
-            InputStream filecontent;
-
-            out = new FileOutputStream(new File(path + File.separator
-                    + fileName));
-            out0 = new FileOutputStream(new File(path1 + File.separator
-                    + fileName));
-
-            filecontent = filePart.getInputStream();
-
-
-            int read = 0;
-            final byte[] bytes = new byte[1024];
-
-            while ((read = filecontent.read(bytes)) != -1) {
-                out.write(bytes, 0, read);
-                out0.write(bytes, 0, read);
-
-                photo = "../assests/images/nguoidung/" + fileName;
-            }
-            nguoiDung.setAvatar(photo);
+            nguoiDung.setAvatar("");
 
             NguoiDungService service = new NguoiDungService(DbAccess.getValue(request));
             service.suaThongTinCaNhan(nguoiDung);
@@ -93,7 +58,7 @@ public class UserSuaThongTinServlet extends HttpServlet {
         } catch (ParseException | SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-        response.sendRedirect("/trang-chu");
+        response.sendRedirect("trang-chu");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

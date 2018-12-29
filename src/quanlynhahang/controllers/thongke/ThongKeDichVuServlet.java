@@ -2,9 +2,9 @@ package quanlynhahang.controllers.thongke;
 
 import quanlynhahang.common.DbAccess;
 import quanlynhahang.models.businessmodels.ThongKeService;
-import quanlynhahang.models.datamodels.ThongKeBinhLuanBieuDo;
-import quanlynhahang.models.datamodels.ThongKeDatBanBieuDo;
-import quanlynhahang.models.datamodels.ThongKeDatBanChiTiet;
+import quanlynhahang.models.viewmodels.ThongKeBinhLuanBieuDo;
+import quanlynhahang.models.viewmodels.ThongKeDatBanBieuDo;
+import quanlynhahang.models.viewmodels.ThongKeDatBanChiTiet;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
 
 @WebServlet(name = "ThongKeDichVuServlet", urlPatterns = {"/admin-thong-ke-dich-vu"})
 public class ThongKeDichVuServlet extends HttpServlet {

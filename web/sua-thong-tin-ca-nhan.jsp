@@ -21,9 +21,9 @@
             href="assests/css/bootstrap.min.css"
     />
 
-    <link rel="stylesheet" href="./assests/css/style.tat-ca-mon-an.css"/>
-    <link rel="stylesheet" href="./assests//css/global.css"/>
-    <link rel="stylesheet" href="./assests/css/style.trang-chu.css"/>
+    <link rel="stylesheet" href="assests/css/style.tat-ca-mon-an.css"/>
+    <link rel="stylesheet" href="assests//css/global.css"/>
+    <link rel="stylesheet" href="assests/css/style.trang-chu.css"/>
     <link
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
@@ -32,7 +32,7 @@
     />
     <link
             rel="stylesheet"
-            href="./assests/css/style.xem-thong-tin-ca-nhan.css"
+            href="assests/css/style.xem-thong-tin-ca-nhan.css"
     />
 </head>
 

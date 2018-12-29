@@ -2,7 +2,7 @@ package quanlynhahang.controllers.thongke;
 
 import quanlynhahang.common.DbAccess;
 import quanlynhahang.models.businessmodels.ThongKeService;
-import quanlynhahang.models.datamodels.ThongKeTongThu;
+import quanlynhahang.models.viewmodels.ThongKeTongThu;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

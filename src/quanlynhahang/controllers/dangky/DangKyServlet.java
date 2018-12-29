@@ -43,7 +43,7 @@ public class DangKyServlet extends HttpServlet {
                 String subject = "Mã xác nhận đăng ký tài khoản mới";
                 Thread sendingEmail = new Thread(() -> Mailer.sendEmail(email, subject, code));
                 sendingEmail.start();
-                response.sendRedirect("/xac-nhan-dang-ky");
+                response.sendRedirect("xac-nhan-dang-ky");
                 return;
             }
             request.setAttribute(Consts.MESSAGE, "Email đã được sử dụng, hảy sử dụng email khác");

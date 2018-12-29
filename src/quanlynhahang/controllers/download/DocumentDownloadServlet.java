@@ -22,11 +22,11 @@ public class DocumentDownloadServlet extends HttpServlet {
                 return;
             }
 
-            String physicalFile = Consts.DOCUMENT_PATH + fileName;
-            Path path = Paths.get(physicalFile);
+            int plashLastIndex = fileName.lastIndexOf("/") + 1;
+            Path path = Paths.get(fileName);
             byte[] data = Files.readAllBytes(path);
             response.setContentType("application/octet-stream");
-            response.setHeader("Content-disposition", "attachment; filename=" + fileName);
+            response.setHeader("Content-disposition", "attachment; filename=" + fileName.substring(plashLastIndex));
             response.setContentLength(data.length);
 
             InputStream sin = new BufferedInputStream(new ByteArrayInputStream(data));

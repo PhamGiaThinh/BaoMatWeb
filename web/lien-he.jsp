@@ -15,12 +15,12 @@
     <script type="text/javascript" src="assests/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assests/css/bootstrap.min.css" />
 
-    <link rel="stylesheet" href="./assests/css/style.trang-chu.css">
-    <link rel="stylesheet" href="./assests/css/style.lien-he.css">
+    <link rel="stylesheet" href="assests/css/style.trang-chu.css">
+    <link rel="stylesheet" href="assests/css/style.lien-he.css">
     
-    <link rel="stylesheet" type="text/css" href="./assests/css/util.css">
-    <link rel="stylesheet" type="text/css" href="./assests/css/main.css">
-    <link rel="stylesheet" href="./assests/css/global.css">
+    <link rel="stylesheet" type="text/css" href="assests/css/util.css">
+    <link rel="stylesheet" type="text/css" href="assests/css/main.css">
+    <link rel="stylesheet" href="assests/css/global.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <style>
     .outline{

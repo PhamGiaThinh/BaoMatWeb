@@ -1,41 +1,21 @@
-package quanlynhahang.models.datamodels;
+package quanlynhahang.models.viewmodels;
 
 import java.sql.Date;
 
-public class ThongKeTongThuChiTiet {
-    private int idHoaDon;
-    private String email;
+public class ThongKeMonAn {
     private String tenMonAn;
     private int soLuong;
     private int donGia;
     private Date thoiGian;
 
-    public ThongKeTongThuChiTiet() {
+    public ThongKeMonAn() {
     }
 
-    public ThongKeTongThuChiTiet(int idHoaDon, String email, String tenMonAn, int soLuong, int donGia, Date thoiGian) {
-        this.idHoaDon = idHoaDon;
-        this.email = email;
+    public ThongKeMonAn(String tenMonAn, int soLuong, int donGia, Date thoiGian) {
         this.tenMonAn = tenMonAn;
         this.soLuong = soLuong;
         this.donGia = donGia;
         this.thoiGian = thoiGian;
-    }
-
-    public int getIdHoaDon() {
-        return idHoaDon;
-    }
-
-    public void setIdHoaDon(int idHoaDon) {
-        this.idHoaDon = idHoaDon;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getTenMonAn() {

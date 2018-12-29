@@ -1,15 +1,13 @@
-package quanlynhahang.models.datamodels;
+package quanlynhahang.models.viewmodels;
 
-import java.util.Date;
-
-public class ThongKeDatBanBieuDo {
+public class ThongKeBinhLuanBieuDo {
     private int soLuong;
     private int ngay;
 
-    public ThongKeDatBanBieuDo() {
+    public ThongKeBinhLuanBieuDo() {
     }
 
-    public ThongKeDatBanBieuDo(int soLuong, int ngay) {
+    public ThongKeBinhLuanBieuDo(int soLuong, int ngay) {
         this.soLuong = soLuong;
         this.ngay = ngay;
     }

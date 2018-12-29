@@ -19,7 +19,7 @@ public class XoaGioHangServlet extends HttpServlet {
             GioHang gioHang = new GioHang(request.getSession());
             gioHang.xoaGioHang();
 
-            response.sendRedirect("/gio-hang");
+            response.sendRedirect("gio-hang");
         } catch (Exception e) {
             e.printStackTrace();
         }

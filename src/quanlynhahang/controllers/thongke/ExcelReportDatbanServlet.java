@@ -1,6 +1,7 @@
 package quanlynhahang.controllers.thongke;
 
 import com.google.gson.JsonObject;
+import quanlynhahang.common.Consts;
 import quanlynhahang.common.DbAccess;
 import quanlynhahang.common.ExcelExport;
 import quanlynhahang.models.businessmodels.ThongKeService;
@@ -32,7 +33,7 @@ public class ExcelReportDatbanServlet extends HttpServlet {
             if (datBans.size() <= 0) {
                 result.addProperty("res", "null");
             } else {
-                String fileName = "thong-ke-dat-ban-thang-" + thang;
+                String fileName = getServletContext().getRealPath("/").replace("\\", "/") + Consts.DOCUMENT_PATH + "thong-ke-dat-ban-thang-" + thang;
                 ExcelExport report = new ExcelExport();
                 fileName = report.thongKeDatBanTheoThang(datBans, fileName, "Thống kê đặt bàn tháng " + thang);
                 result.addProperty("res", fileName);

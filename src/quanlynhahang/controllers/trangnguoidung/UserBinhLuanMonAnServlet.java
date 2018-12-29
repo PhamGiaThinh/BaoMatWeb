@@ -21,7 +21,7 @@ public class UserBinhLuanMonAnServlet extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=UTF-8");
         if (!AuthorizePermission.islogined(request)) {
-            response.sendRedirect("/dang-nhap");
+            response.sendRedirect("dang-nhap");
             return;
         }
         try {
@@ -35,7 +35,7 @@ public class UserBinhLuanMonAnServlet extends HttpServlet {
 
             userBinhLuanService.addBinhLuanMonAn(idMonAn, noiDung, email);
 
-            response.sendRedirect("/chi-tiet-mon-an?idMonAn="+idMonAn+"");
+            response.sendRedirect("chi-tiet-mon-an?idMonAn="+idMonAn+"");
         } catch (SQLException | ClassNotFoundException  e) {
             e.printStackTrace();
         }

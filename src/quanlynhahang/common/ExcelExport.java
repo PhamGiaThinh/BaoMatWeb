@@ -82,14 +82,14 @@ public class ExcelExport {
             rownum += 2;
         }
 
-        String fullFileName = Consts.DOCUMENT_PATH + fileName + ".xlsx";
+        String fullFileName = fileName + ".xlsx";
         File saveFile = new File(fullFileName);
 
         FileOutputStream fout = new FileOutputStream(saveFile);
         workbook.write(fout);
         workbook.close();
         fout.close();
-        return fileName + ".xlsx";
+        return fullFileName;
     }
 
     public String thongKeDatBanTheoThang(ArrayList<DatBan> datBans, String fileName, String sheetName) throws IOException {
@@ -183,13 +183,13 @@ public class ExcelExport {
             cell = row.createCell(6, CellType.STRING);
             cell.setCellValue(datBan.getSoDT());
         }
-        String fullFileName = Consts.DOCUMENT_PATH + fileName + ".xlsx";
+        String fullFileName = fileName + ".xlsx";
         File saveFile = new File(fullFileName);
 
         FileOutputStream fout = new FileOutputStream(saveFile);
         workbook.write(fout);
         workbook.close();
         fout.close();
-        return fileName + ".xlsx";
+        return fullFileName;
     }
 }

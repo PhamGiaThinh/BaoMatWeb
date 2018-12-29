@@ -63,7 +63,7 @@
         <h2 class="card-title">Quản lý món ăn</h2>
         <div class="row">
             <div class="col-sm-12 col-md-6">
-                <a href="/admin/them-mon-an" class="btn btn-primary btn-rounded">Thêm món ăn</a>
+                <a href="admin-them-mon-an" class="btn btn-primary btn-rounded">Thêm món ăn</a>
             </div>
             <div class="col-sm-12 col-md-6">
                 <input type="search" class="form-control search" placeholder="Search" aria-controls="order-listing">

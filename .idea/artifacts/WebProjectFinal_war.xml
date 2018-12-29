@@ -3,13 +3,6 @@
     <output-path>$PROJECT_DIR$/out/artifacts/WebProjectFinal_war</output-path>
     <root id="archive" name="WebProjectFinal_war.war">
       <element id="artifact" artifact-name="WebProjectFinal:war exploded" />
-      <element id="directory" name="WEB-INF">
-        <element id="directory" name="lib">
-          <element id="library" level="project" name="mssql-jdbc-7.0.0.jre8" />
-          <element id="library" level="project" name="taglibs-standard-impl-1.2.5" />
-          <element id="library" level="project" name="activation-1.1.1" />
-        </element>
-      </element>
     </root>
   </artifact>
 </component>

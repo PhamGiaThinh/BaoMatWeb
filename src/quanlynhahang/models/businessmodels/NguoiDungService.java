@@ -118,7 +118,7 @@ public class NguoiDungService extends ConnectDatabase implements Businesses<Nguo
         }
         openConnection();
 
-        String sql = "SELECT * FROM LayMotNguoiDung(?)";
+        String sql = "SELECT * FROM NguoiDung WHERE Email = ?";
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setEscapeProcessing(true);
         statement.setQueryTimeout(90);
