@@ -7,7 +7,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Đăng ký tài khoản</title>
+    <title>Đăng nhập database</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="<%=request.getContextPath()%>/assests/node_modules/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="<%=request.getContextPath()%>/assests/node_modules/flag-icon-css/css/flag-icon.min.css">
@@ -32,6 +32,7 @@
                             <div class="auth-form-light text-left p-5">
                                 <h2>Kết nối database</h2>
                                 <h4 class="font-weight-light">Chọn server để thực kết nối vào cơ sở dữ liệu</h4>
+                                <small class="text-danger">${requestScope.message}</small>
                                 <form class="pt-5" action="admin-ket-noi-database" method="post">
                                     <div class="form-group">
                                         <label for="server">Database username</label>

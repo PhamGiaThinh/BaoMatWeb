@@ -19,11 +19,6 @@ public class DashboardServlet extends HttpServlet {
             response.sendError(404);
             return;
         }
-        if (userDbConnect.getHostName() == null || userDbConnect.getPort() == null) {
-            response.sendRedirect("admin-ket-noi-database");
-            return;
-        }
-
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/admin-dashboard.jsp");
         dispatcher.forward(request, response);
     }

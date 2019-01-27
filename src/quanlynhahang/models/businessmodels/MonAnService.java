@@ -123,7 +123,7 @@ public class MonAnService extends ConnectDatabase implements Businesses<MonAn> {
         closeConnection();
         return monAns;
     }
-//    @Override
+    @Override
     public int add(MonAn monAn) throws SQLException, ClassNotFoundException {
         if (monAn == null) {
             return 0;
@@ -147,7 +147,6 @@ public class MonAnService extends ConnectDatabase implements Businesses<MonAn> {
         closeConnection();
         return rowAffected;
     }
-
 
     @Override
     public int delete(Object... keys) throws SQLException, ClassNotFoundException {
@@ -223,9 +222,7 @@ public class MonAnService extends ConnectDatabase implements Businesses<MonAn> {
 
     public ArrayList<ThucDon> layToanBoThucDon() throws SQLException, ClassNotFoundException {
         ThucDonService thucDonService = new ThucDonService(getDbAccessValue());
-        ArrayList<ThucDon> listThucDon = null;
-        listThucDon = thucDonService.getData();
-        return listThucDon;
+        return thucDonService.getData();
     }
 
     public ArrayList<LoaiMon> layToanBoLoaiMon() throws SQLException, ClassNotFoundException {

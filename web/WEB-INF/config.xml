@@ -17,8 +17,8 @@
 	Configure the location of uploaded files. See the following article for more details:
 	http://docs.cksource.com/CKFinder_2.x/Developers_Guide/Java/Configuration/baseURL_and_baseDir
 	-->
-	<baseDir></baseDir>
-	<baseURL>assests/content/upload/</baseURL>
+	<baseDir>D:/home/site/wwwroot/webapps/ROOT/assests/content/upload/</baseDir>
+	<baseURL>/assests/content/upload/</baseURL>
 
 	<licenseKey></licenseKey>
 	<licenseName></licenseName>

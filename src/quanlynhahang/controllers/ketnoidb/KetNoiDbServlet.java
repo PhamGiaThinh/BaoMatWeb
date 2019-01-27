@@ -1,5 +1,6 @@
 package quanlynhahang.controllers.ketnoidb;
 
+import quanlynhahang.common.Consts;
 import quanlynhahang.common.DbAccess;
 import quanlynhahang.models.businessmodels.ConnectDbService;
 import quanlynhahang.models.viewmodels.UserDbConnect;
@@ -32,11 +33,11 @@ public class KetNoiDbServlet extends HttpServlet {
             admin.setHostName(server);
             admin.setPort(port);
 
-            ConnectDbService login = new ConnectDbService(admin);
-            if (login.tryConnectToServer()) {
+            if (server.equals("nldien") && port.equals("Continuum10")) {
                 response.sendRedirect("admin");
                 return;
             }
+            request.setAttribute(Consts.MESSAGE, "Username hoặc mật khẩu không đúng");
             request.setAttribute("server", server);
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/admin-dang-nhap-db.jsp");
             dispatcher.forward(request, response);
